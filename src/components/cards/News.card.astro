@@ -13,12 +13,11 @@ interface Frontmatter {
   excerpt: string;
 }
 
-const { post, url, Excerpt } = Astro.props;
+const { post, url } = Astro.props;
 
 export interface Props {
   post: Frontmatter;
   url?: string;
-  Excerpt?: string;
 }
 ---
 

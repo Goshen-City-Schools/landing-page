@@ -40,13 +40,7 @@ const posts = await Astro.glob<Frontmatter>("./*.mdx");
           {
             posts.map(
               (post) =>
-                post && (
-                  <NewsCard
-                    url={post.url}
-                    post={post?.frontmatter}
-                    Excerpt={post?.Content[0]}
-                  />
-                )
+                post && <NewsCard url={post.url} post={post?.frontmatter} />
             )
           }
         </div>

@@ -33,7 +33,7 @@ const posts = await Astro.glob<Frontmatter>("../../pages/news/*.mdx");
 
   <div class="container grid sm:grid-cols-3 sm:gap-x-8 gap-y-10">
     {
-      posts.map(
+      posts?.map(
         (post) => post && <NewsCard url={post?.url} post={post?.frontmatter} />
       )
     }
