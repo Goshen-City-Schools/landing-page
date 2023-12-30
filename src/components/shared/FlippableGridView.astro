@@ -1,0 +1,27 @@
+---
+component: FlippableGridView;
+
+const { isReverse, imgSrc, title, content } = Astro.props;
+---
+
+<template>
+  <div class={`flex ${isReverse ? "flex-row-reverse" : ""}`}>
+    <div class="flex-shrink-0 flex-grow">
+      <!-- You can use the 'imgSrc', 'title', and 'content' variables here -->
+      <img src={imgSrc} alt={title} />
+      <h2>{title}</h2>
+      <p>{content}</p>
+    </div>
+    <div class="flex-shrink-0 flex-grow">
+      <h2>{title}</h2>
+    </div>
+  </div>
+</template>
+
+<style>
+  /* You can add your styles here if needed */
+</style>
+
+<script type="module">
+  export { FlippableGridView };
+</script>

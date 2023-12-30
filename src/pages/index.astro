@@ -3,14 +3,46 @@ import Layout from "../layouts/Layout.astro";
 import NewsCard from "../components/cards/News.card";
 import TestimonialCard from "../components/cards/Testimonial.card";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 ---
 
 <Layout activeNav="/">
   <main class="">
     <!-- Hero  -->
 
-    <section class="hero grid w-full h-[70vh]">
-      <div class="container px-4"><h1>Goshen Group of Schools</h1></div>
+    <section class="hero grid w-full h-[70vh] py-4">
+      <div
+        class="container gap-8 px-4 items-center grid grid-cols-7 h-full overflow-hidden"
+      >
+        <!-- Write-up -->
+        <div class="col-span-4 grid gap-8 prose">
+          <h1 class="sm:text-6xl">Empowering Every Child's Potential</h1>
+
+          <p class="text-gray-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            nihil velit praesentium porro repudiandae in nesciunt adipisci.
+            Atque eos accusamus suscipit distinctio, consectetur illum
+            similique.
+          </p>
+
+          <button
+            class="flex gap-4 font-bold justify-center items-center bg-blue-950 w-max rounded-[48px] px-6 py-3 text-white"
+          >
+            Enroll Today <Icon name={"mdi:arrow"} />
+          </button>
+        </div>
+
+        <!-- Illustration -->
+        <div class="col-start-5 col-end-8 relative h-full w-full">
+          <Image
+            height={600}
+            width={600}
+            class={"absolute top-0 h-full w-full object-cover"}
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+            alt={"Goshen City and Starts Group of Schools"}
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Schooling Categories -->
@@ -62,38 +94,46 @@ import { Icon } from "astro-icon/components";
 
     <!-- About Us -->
 
-    <section class="bg-gray-100 py-6">
-      <div class="container mb-4">
+    <section class="bg-gray-100 py-6 mt-20 pb-24">
+      <div class="container mb-12 pt-8">
         <p class="text-purple-700 font-bold tracking-wide">ABOUT US</p>
       </div>
 
-      <div class="illustation-image__about h-[30vh]"></div>
+      <div class="illustation-image__about h-[52vh] mb-16"></div>
 
-      <div class="container flex flex-col gap-4">
-        <div class="prose max-w-6xl prose-headings:mb-3 text-gray-800 w-full">
-          <h2>Welcome to Goshen Group of Schools</h2>
+      <div class="container flex flex-col gap-2">
+        <div
+          class="prose max-w-6xl prose-headings:mb-3 mb-12 text-gray-800 w-full"
+        >
+          <h2 class="!mb-10">Welcome to Goshen Group of Schools</h2>
 
           <p class="text-gray-800">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
             id! Architecto quaerat labore id provident, eveniet libero fuga
             quidem ipsam incidunt nihil fugiat at. Enim fugiat a laborum culpa
-            hic esse delectus mollitia obcaecati ipsum.
+            hic esse delectus mollitia obcaecati ipsum. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Modi, ex. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Velit, voluptatem! Quod,
+            cupiditate.
           </p>
         </div>
 
         <button
-          class="flex gap-4 justify-center items-center bg-purple-700 w-max rounded-3xl px-6 py-4 text-white"
+          class="flex gap-4 font-bold justify-center items-center bg-purple-700 w-max rounded-[48px] px-6 py-4 text-white"
         >
           Learn more<Icon name={"mdi:arrow"} />
         </button>
 
-        <div class="prose p-8 bg-purple-700 max-w-6xl mt-24 rounded-3xl w-full">
+        <div
+          class="prose p-12 bg-purple-700 max-w-6xl mt-24 rounded-3xl w-full"
+        >
           <h2 class="text-white">Our Mission</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             pariatur optio possimus delectus! Repellendus voluptatibus magni,
             laboriosam, autem dignissimos perferendis debitis provident deserunt
-            nemo maiores est asperiores voluptatum.
+            nemo maiores est asperiores voluptatum. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit.
           </p>
         </div>
       </div>
@@ -106,6 +146,8 @@ import { Icon } from "astro-icon/components";
         <p class="text-purple-700 font-bold tracking-wide">WHY CHOOSE US</p>
         <h3 class="text-lg font-bold">Here's What make us Unique!</h3>
       </div>
+
+      <div class="container px-12"></div>
     </section>
 
     <!-- Gallery-->
@@ -158,5 +200,9 @@ import { Icon } from "astro-icon/components";
 
 <style>
   .illustation-image__about {
+    background-image: url("https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703928891/banners/q8e1017bw0v3owa8gwh7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 </style>
