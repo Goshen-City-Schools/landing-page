@@ -109,10 +109,6 @@ const { activeNav } = Astro.props;
     <ViewTransitions />
 
     <script is:inline src="/toggle-theme.js"></script>
-    <script>
-      import { inject } from "@vercel/analytics";
-      inject();
-    </script>
   </head>
   <body>
     <Header activeNav={activeNav} />

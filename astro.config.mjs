@@ -6,8 +6,10 @@ import { defineConfig } from "astro/config";
 import { SITE } from "./src/config";
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
-
 import react from "@astrojs/react";
+
+import vercel from "@astrojs/vercel/serverless";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,10 +40,23 @@ export default defineConfig({
       wrap: true
     }
   },
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
+  adapter: vercel({
+    speedInsights: {
+      enabled: true,
+    },
+  }),
   vite: {
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"]
     }
   },
-  scopedStyleStrategy: "where"
+  scopedStyleStrategy: "where",
+  output: "server",
+  adapter: vercel()
 });
