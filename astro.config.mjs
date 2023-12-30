@@ -7,9 +7,9 @@ import { SITE } from "./src/config";
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import react from "@astrojs/react";
-
 import vercel from "@astrojs/vercel/serverless";
 
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,7 +20,7 @@ export default defineConfig({
     include: {
       mdi: ["*"] // (Default) Loads entire Material Design Icon set
     }
-  }), react()]
+  }), react(), sitemap()]
   // react(),
   // sitemap(),
   ,
@@ -43,11 +43,11 @@ export default defineConfig({
   output: 'server',
   adapter: vercel({
     webAnalytics: {
-      enabled: true,
+      enabled: true
     },
-     speedInsights: {
-      enabled: true,
-    },
+    speedInsights: {
+      enabled: true
+    }
   }),
   vite: {
     optimizeDeps: {
