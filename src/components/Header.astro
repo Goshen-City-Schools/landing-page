@@ -20,17 +20,21 @@ const { activeNav } = Astro.props;
       class="container px-4 items-center py-4 grid grid-cols-3 justify-between"
     >
       <a
-        class="leading-tight"
+        class="leading-tight flex gap-3"
         href={SITE.location.link}
         target="_blank"
-        rel="noopener noreferrer"><small>{SITE.location.address}</small></a
-      >
+        rel="noopener noreferrer"
+        ><div class="text-[18px]">
+          <Icon name={"mdi:location-outline"} />
+        </div>
+        <p class="font-bold tracking-wide">{SITE.location.address}</p>
+      </a>
 
       <a
         href="tel:+2348036960509"
         class="flex gap-2 items-center justify-center w-full"
         ><Icon name={"mdi:phone"} />
-        <small class="font-bold -tracking-wide">08036960509</small>
+        <p class="font-bold -tracking-wide">08036960509</p>
       </a>
 
       <div class="socials flex gap-4 mx-auto w-full justify-end">
@@ -80,13 +84,13 @@ const { activeNav } = Astro.props;
       </button>
 
       <!-- Navigation Menu -->
-      <ul id="menu-items" class="display-none sm:flex text-sm">
+      <ul id="menu-items" class="display-none sm:flex">
         <li>
           <a href="/" class={activeNav === "/" ? "active" : ""}> Home</a>
         </li>
         <li>
           <a href="/about" class={activeNav === "about" ? "active" : ""}>
-            About us
+            About Us
           </a>
         </li>
         <li>
@@ -102,7 +106,7 @@ const { activeNav } = Astro.props;
             href="/contact-us"
             class={activeNav === "contact-us" ? "active" : ""}
           >
-            Contact
+            Contact Us
           </a>
         </li>
       </ul>
@@ -132,7 +136,7 @@ const { activeNav } = Astro.props;
     @apply col-span-2 flex items-center justify-center;
   }
   nav ul li a {
-    @apply w-full px-4 py-3 text-center font-medium hover:text-purple-950 sm:my-0 sm:px-2 sm:py-1;
+    @apply w-full px-4 py-3 text-center font-bold hover:text-purple-950 sm:my-0 sm:px-2 sm:py-1;
   }
 
   nav a.active {
