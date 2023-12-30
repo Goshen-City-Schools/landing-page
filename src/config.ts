@@ -10,7 +10,7 @@ export const SITE: Site = {
   postPerPage: 3,
   location: {
     address: "Plot 11 - 14, Living Avenue, Opp. Police Detectives College, Enugu.",
-    link:""
+    link:"/"
   },
   email: "goshencitychannel@gmail.com"
 
