@@ -1,27 +1,36 @@
 ---
-component: FlippableGridView;
-
+import { Image } from "astro:assets";
 const { isReverse, imgSrc, title, content } = Astro.props;
 ---
 
-<template>
-  <div class={`flex ${isReverse ? "flex-row-reverse" : ""}`}>
-    <div class="flex-shrink-0 flex-grow">
-      <!-- You can use the 'imgSrc', 'title', and 'content' variables here -->
-      <img src={imgSrc} alt={title} />
-      <h2>{title}</h2>
-      <p>{content}</p>
-    </div>
-    <div class="flex-shrink-0 flex-grow">
-      <h2>{title}</h2>
-    </div>
+<div
+  class={`w-full flex gap-4 items-center sm:gap-8 py-6 ${
+    isReverse ? "flex-row-reverse" : ""
+  }`}
+>
+  <div
+    class="w-[47%] h-[280px] p-4 rounded-3xl overflow-hidden flex-shrink-0 relative"
+  >
+    <Image
+      src={imgSrc
+        ? imgSrc
+        : "https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703928891/banners/q8e1017bw0v3owa8gwh7.jpg"}
+      alt={title ? title : "goshen"}
+      height={300}
+      width={300}
+      class={"absolute top-0 w-full h-full object-cover"}
+    />
+    <h2>{title}</h2>
+    <p>{content}</p>
   </div>
-</template>
-
-<style>
-  /* You can add your styles here if needed */
-</style>
-
-<script type="module">
-  export { FlippableGridView };
-</script>
+  <div class="prose">
+    <h2>{title ? title : "This section title"}</h2>
+    <p class="text-gray-900">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ut neque
+      voluptas quidem obcaecati accusantium. Ipsum veritatis omnis nostrum
+      quaerat in ea dignissimos eligendi dolore, natus, voluptatibus atque ipsam
+      rerum sapiente quas sint! Voluptates fugit temporibus possimus asperiores
+      tenetur! Pariatur eos dolor voluptates ipsam autem!
+    </p>
+  </div>
+</div>
