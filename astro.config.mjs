@@ -5,8 +5,9 @@ import { defineConfig } from "astro/config";
 // import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import tailwind from "@astrojs/tailwind";
-
 import icon from "astro-icon";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,9 +16,9 @@ export default defineConfig({
     applyBaseStyles: false
   }), icon({
     include: {
-      mdi: ["*"], // (Default) Loads entire Material Design Icon set
-    },
-  }),]
+      mdi: ["*"] // (Default) Loads entire Material Design Icon set
+    }
+  }), react()]
   // react(),
   // sitemap(),
   ,
