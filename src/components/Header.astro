@@ -12,7 +12,7 @@ export interface Props {
 const { activeNav } = Astro.props;
 ---
 
-<header class="shadow-sm">
+<header class="border-b-2">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <!-- Top Header navigation -->
   <div class="bg-purple-900 text-white">
@@ -29,7 +29,8 @@ const { activeNav } = Astro.props;
       <a
         href="tel:+2348036960509"
         class="flex gap-2 items-center justify-center w-full"
-        ><Icon name={"mdi:phone"} /> <small>08036960509</small>
+        ><Icon name={"mdi:phone"} />
+        <small class="font-bold -tracking-wide">08036960509</small>
       </a>
 
       <div class="socials flex gap-4 mx-auto w-full justify-end">
@@ -79,7 +80,7 @@ const { activeNav } = Astro.props;
       </button>
 
       <!-- Navigation Menu -->
-      <ul id="menu-items" class="display-none sm:flex">
+      <ul id="menu-items" class="display-none sm:flex text-sm">
         <li>
           <a href="/" class={activeNav === "/" ? "active" : ""}> Home</a>
         </li>

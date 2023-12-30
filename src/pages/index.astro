@@ -5,8 +5,69 @@ import Layout from "../layouts/Layout.astro";
 <Layout activeNav="/">
   <main class="">
     <!-- Hero Section -->
-    <section class="hero grid w-full">
+    <section class="hero grid w-full h-[70vh]">
       <div class="container px-4"><h1>Goshen Group of Schools</h1></div>
+    </section>
+
+    <!-- Schooling Categories -->
+    <section class="bg-blue-950 py-8">
+      <div class="container w-full text-white">
+        <div class="grid grid-cols-2 sm:grid-cols-4 space-x-4 divide-x-2">
+          <div
+            class="flex flex-col px-2 prose w-full justify-center items-center text-center gap-2"
+          >
+            <h3 class="not-italic">Creche</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae, itaque maiores veritatis hic perferendis vel.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col px-2 prose w-full justify-center items-center text-center gap-2"
+          >
+            <h3 class="not-italic">Nursery</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae, itaque maiores veritatis hic perferendis vel.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col px-2 prose w-full justify-center items-center text-center gap-2"
+          >
+            <h3 class="not-italic">Basic</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae, itaque maiores veritatis hic perferendis vel.
+            </p>
+          </div>
+          <div
+            class="flex flex-col px-2 prose w-full justify-center items-center text-center gap-2"
+          >
+            <h3 class="not-italic">Secondary</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae, itaque maiores veritatis hic perferendis vel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+
+    <section class="bg-gray-100 py-6">
+      <div class="container">
+        <p class="text-purple-700">ABOUT US</p>
+      </div>
+
+      <div class="illustation-image__about h-[30vh]"></div>
     </section>
   </main>
 </Layout>
+
+<style>
+
+  .illustation-image__about
+</style>

@@ -54,7 +54,7 @@ function withOpacity(variableName) {
 		  transparent: "transparent",
 		},
 		fontFamily: {
-		  mono: ["IBM Plex Mono", "monospace"],
+		  mono: ["Open Sans", "sans-serif"],
 		},
   
 		typography: {

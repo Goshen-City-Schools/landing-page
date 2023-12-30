@@ -22,6 +22,8 @@
   }
   html {
     scroll-behavior: smooth;
+    font-size: .9rem;
+
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
