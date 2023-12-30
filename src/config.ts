@@ -4,10 +4,16 @@ export const SITE: Site = {
   website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
   author: "Sat Naing",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  title: "GOSHEN GROUP OF SCHOOLS",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
+  location: {
+    address: "Plot 11 - 14, Living Avenue, Opp. Police Detectives College, Enugu.",
+    link:""
+  },
+  email: "goshencitychannel@gmail.com"
+
 };
 
 export const LOCALE = {

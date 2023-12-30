@@ -1,6 +1,7 @@
 ---
 // import Image from "astro/components/Image.astro.jsx";
 
+import { SITE } from "@config";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
@@ -11,35 +12,46 @@ export interface Props {
 const { activeNav } = Astro.props;
 ---
 
-<header>
+<header class="shadow-sm">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <!-- Top Header navigation -->
-  <div
-    class="container items-center py-3 text-sm grid grid-cols-3 justify-between"
-  >
-    <a href="http://" target="_blank" rel="noopener noreferrer"
-      >Plot 11 - 14, Living Avenue, Opp. Police Detectives College, Enugu</a
+  <div class="bg-purple-900 text-white">
+    <div
+      class="container px-4 items-center py-3 text-sm grid grid-cols-3 justify-between"
     >
+      <a
+        class="leading-tight"
+        href={SITE.location.link}
+        target="_blank"
+        rel="noopener noreferrer"><small>{SITE.location.address}</small></a
+      >
 
-    <a
-      href="tel:+2348036960509"
-      class="flex gap-2 items-center justify-center w-full"
-      ><Icon name={"mdi:phone"} />08036960509</a
-    >
+      <a
+        href="tel:+2348036960509"
+        class="flex gap-2 items-center justify-center w-full"
+        ><Icon name={"mdi:phone"} /> <small>08036960509</small>
+      </a>
 
-    <div class="socials flex gap-1 mx-auto w-full justify-end">
-      <Icon name={"mdi:facebook"} />
-      <Icon name={"mdi:twitter"} />
-      <Icon name={"mdi:linkedin"} />
+      <div class="socials flex gap-4 mx-auto w-full justify-end">
+        <Icon size={4} name={"mdi:facebook"} />
+        <Icon name={"mdi:twitter"} />
+        <Icon name={"mdi:linkedin"} />
+      </div>
     </div>
   </div>
 
   <!-- Bottom Header Navigation -->
-  <div class="container flex justify-between items-center">
-    <a href="/">
-      <Image alt={"sd"} src={"/public/favicon.svg"} height={60} width={60} />
+  <div class="container px-4 flex justify-between sm:items-center">
+    <a href="/" class="">
+      <Image
+        alt={"sd"}
+        src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703912088/logos/fb10n60uzloadt3ay6jx.png"}
+        height={60}
+        width={60}
+      />
     </a>
     <nav class="flex justify-end gap-4">
+      <!-- Hamburger -->
       <button
         class="hamburger-menu focus-outline"
         aria-label="Open Menu"
@@ -66,6 +78,7 @@ const { activeNav } = Astro.props;
         </svg>
       </button>
 
+      <!-- Navigation Menu -->
       <ul id="menu-items" class="display-none sm:flex">
         <li>
           <a href="/" class={activeNav === "/" ? "active" : ""}> Home</a>
@@ -118,17 +131,11 @@ const { activeNav } = Astro.props;
     @apply col-span-2 flex items-center justify-center;
   }
   nav ul li a {
-    @apply w-full px-4 py-3 text-center font-medium hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
+    @apply w-full px-4 py-3 text-center font-medium hover:text-purple-950 sm:my-0 sm:px-2 sm:py-1;
   }
-  nav ul li:nth-last-child(2) a {
-    @apply w-auto;
-  }
-  nav ul li:nth-last-child(1),
-  nav ul li:nth-last-child(2) {
-    @apply col-span-1;
-  }
+
   nav a.active {
-    @apply underline decoration-wavy decoration-2 underline-offset-4;
+    @apply underline text-purple-900 decoration-2 underline-offset-4;
   }
   nav a.active svg {
     @apply fill-skin-accent;
