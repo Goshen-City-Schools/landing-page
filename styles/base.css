@@ -137,3 +137,7 @@
 
 /* Custom */
 .container{ @apply w-full mx-auto max-w-6xl}
+
+main{
+ @apply min-h-screen py-6 w-full
+}
