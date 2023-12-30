@@ -45,12 +45,11 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
-  }),
-  adapter: vercel({
     speedInsights: {
       enabled: true,
     },
   }),
+
   vite: {
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"]
