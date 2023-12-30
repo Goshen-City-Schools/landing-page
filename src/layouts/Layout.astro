@@ -7,6 +7,8 @@ import Footer from "../components/Footer.astro";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 export interface Props {
   title?: string;
   author?: string;
@@ -39,7 +41,7 @@ const { activeNav } = Astro.props;
 
 <!doctype html>
 <html lang=`${LOCALE.lang ?? "en"}`>
-  <head>
+  <SpeedInsights>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -105,11 +107,11 @@ const { activeNav } = Astro.props;
         />
       )
     }
-
+    <SpeedInsights />
     <ViewTransitions />
 
     <script is:inline src="/toggle-theme.js"></script>
-  </head>
+  </SpeedInsights>
   <body>
     <Header activeNav={activeNav} />
     <slot />
