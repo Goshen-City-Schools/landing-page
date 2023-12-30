@@ -1,9 +1,9 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+  website: "https://goshencityschools.com/", // replace this with your deployed domain
   author: "Sat Naing",
-  desc: "Goshen City and Stars Group of Schools are strategically balanced with the Nation's educational system.",
+  desc: "Goshen City and Stars Group of Schools is strategically balanced with the Nation's educational system.",
   title: "GOSHEN GROUP OF SCHOOLS",
   ogImage: "https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703919606/banners/uqwfgzcicuvh834keynk.jpg",
   lightAndDarkMode: true,
