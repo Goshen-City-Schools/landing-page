@@ -2,8 +2,8 @@
 // import Layout from "../layouts/Layout.astro";
 import Layout from "@layouts/Layout.astro";
 import NewsCard from "../components/cards/News.card";
-import TestimonialCard from "../components/cards/Testimonial.card";
 import FlippableGridView from "../components/shared/FlippableGridView.astro";
+import TestimonialCard from "@components/cards/TestimonialCard.astro";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 ---
@@ -49,7 +49,7 @@ import { Image } from "astro:assets";
 
     <!-- Schooling Categories -->
 
-    <section class="bg-blue-950 py-8">
+    <section class="bg-blue-950 py-12 sm:py-20">
       <div class="container w-full text-white">
         <div class="grid grid-cols-2 sm:grid-cols-4 space-x-4 divide-x-2">
           <div
@@ -161,8 +161,8 @@ import { Image } from "astro:assets";
 
     <!-- Gallery-->
 
-    <section class="py-8">
-      <div class="container mb-4 flex justify-between items-end">
+    <section class="py-8 relative h-[88vh] grid items-center">
+      <div class="container mb-12 flex justify-between items-end">
         <div class="">
           <p class="text-purple-700 font-bold tracking-wide mb-5">GALLERY</p>
           <h3 class="text-lg font-bold">Take a Virtual Tour of our School</h3>
@@ -181,23 +181,114 @@ import { Image } from "astro:assets";
           </div>
         </div>
       </div>
+      <div class="grid grid-cols-3">
+        <div class="imgContainer h-[350px] w-full">
+          <Image
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+            height={320}
+            width={320}
+            alt={"Goshen Gallery Images Preview"}
+            class={"img object-cover"}
+          />
+        </div>
+        <div class="imgContainer h-[350px] w-full">
+          <Image
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+            height={320}
+            width={320}
+            alt={"Goshen Gallery Images Preview"}
+            class={"img object-cover"}
+          />
+        </div>
+        <div class="imgContainer h-[350px] w-full">
+          <Image
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+            height={320}
+            width={320}
+            alt={"Goshen Gallery Images Preview"}
+            class={"img object-cover"}
+          />
+        </div>
+      </div>
+
+      <div
+        class="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-30%] image-display h-[60vh] w-[85vh]"
+      >
+        <div
+          class="relative h-full w-full overflow-hidden rounded-[48px] shadow-sm"
+        >
+          <Image
+            class={"imgContainer object-cover"}
+            height={1080}
+            width={1080}
+            alt={"Goshen Founder"}
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Founders / Director Speech -->
 
-    <section class="py-8">
-      <div class="container mb-4">
+    <section class="py-8 pb-24">
+      <div class="container mb-12">
         <p class="text-purple-700 font-bold tracking-wide mb-5">
           FOUNDER/DIRECTORS
         </p>
         <h3 class="text-lg font-bold">Meet Our Director</h3>
       </div>
+
+      <div class="container flex gap-4 items-center sm:gap-8">
+        <div
+          class="w-[38%] h-[400px] rounded-3xl overflow-hidden flex-shrink-0 relative"
+        >
+          <Image
+            class={"absolute h-full w-full object-cover"}
+            height={300}
+            width={300}
+            alt={"Goshen Founder"}
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+          />
+        </div>
+
+        <div class="">
+          <div class="flex flex-col gap-1 prose">
+            <h2>
+              "Train up a child in the way he should go and when he is old, he
+              will not depart from it."
+            </h2>
+            <span class="font-bold">Proverbs 22:6</span>
+          </div>
+
+          <p class="text-gray-700 line-clamp-7 prose mb-3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+            voluptates tempore fugiat autem quisquam tenetur explicabo
+            laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
+            aspernatur eum, reprehenderit molestias distinctio alias maiores
+            enim labore obcaecati. Amet quaerat excepturi, illo iure esse
+            perferendis earum nam porro architecto cupiditate voluptates
+            consectetur sapiente? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Distinctio fugiat quam similique.
+          </p>
+
+          <a
+            href=""
+            class="font-bold prose mb-2 flex text-purple-500 underline-offset-4 underline"
+            >Read More
+          </a>
+
+          <div class="flex flex-col">
+            <h2 class="font-bold">OKAKE, IFEOMA CHINWE</h2>
+            <small>Director/Founder</small>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
 
-    <section class="bg-purple-100 py-6">
-      <div class="container mb-4 flex justify-between items-end">
+    <section class="bg-purple-100 py-24">
+      <div class="container mb-12 flex justify-between items-end">
         <div class="">
           <p class="text-purple-700 font-bold tracking-wide mb-5">
             TESTIMONIES
@@ -205,7 +296,7 @@ import { Image } from "astro:assets";
           <h3 class="text-lg font-bold">What Parents Say about Us</h3>
         </div>
 
-        <!-- Gallery arrow Navigation -->
+        <!-- Testimonies Navigation arrows -->
         <div class="arrows flex gap-3">
           <div
             class="h-12 w-12 bg-purple-100 text-gray-500 rounded-full grid place-items-center"
@@ -219,7 +310,8 @@ import { Image } from "astro:assets";
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container grid sm:grid-cols-2 gap-4 sm:gap-8">
+        <TestimonialCard />
         <TestimonialCard />
       </div>
     </section>
@@ -228,7 +320,7 @@ import { Image } from "astro:assets";
   <!-- News and Updates -->
 
   <section class="py-8">
-    <div class="container mb-4 flex justify-between items-end">
+    <div class="container mb-12 flex justify-between items-end">
       <div class="">
         <p class="text-purple-700 font-bold tracking-wide mb-5">
           NEWS AND UPDATES

@@ -2,27 +2,16 @@
 import { SITE } from "../config";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+import Logo from "./shared/Logo.astro";
 ---
 
-<footer class="px-4 py-16 text-sm">
+<footer class="px-4 py-16">
   <div class="container">
     <div class="grid mb-12 sm:grid-cols-4 gap-4 sm:gap-6">
       <!-- Column 1 -->
-      <div class="col-span-2 pr-4 flex flex-col gap-4 md:gap-6">
+      <div class="col-span-2 sm:max-w-sm pr-4 flex flex-col gap-4 md:gap-6">
         <!-- School logo -->
-        <a class="flex gap-4 items-center mb-2" href=""
-          ><Image
-            alt={"sd"}
-            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703912088/logos/fb10n60uzloadt3ay6jx.png"}
-            height={48}
-            width={48}
-          />
-
-          <div class="flex flex-col">
-            <p>GOSHEN GROUP OF SCHOOLS</p>
-            <p class="text-xs font-bold">CRE . NUR . PRI . SEC</p>
-          </div>
-        </a>
+        <Logo />
 
         <!-- School Location -->
         <a href={SITE.location.link} class="flex gap-4 pl-4">
@@ -64,8 +53,8 @@ import { Image } from "astro:assets";
         <h3 class="font-bold mb-4">Follow Us</h3>
 
         <nav class="flex flex-col space-y-4">
-          <a href="">
-            <Icon name={"mdi:facebook"} />
+          <a href="" class="text-[24px]">
+            <Icon class={"text-[24px]"} name={"mdi:facebook"} />
           </a>
           <a href=""> <Icon name={"mdi:twitter"} /></a>
           <a href=""> <Icon name={"mdi:linkedin"} /></a>

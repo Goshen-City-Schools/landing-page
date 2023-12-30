@@ -143,3 +143,9 @@
 main{
  @apply min-h-screen py-6 w-full
 }
+
+.imgContainer {position: relative; overflow: hidden;}
+
+.imgContainer .img {
+  position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+}

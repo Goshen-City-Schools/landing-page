@@ -4,6 +4,7 @@
 import { SITE } from "../config";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+import Logo from "./shared/Logo.astro";
 
 export interface Props {
   activeNav?: "/" | "about" | "news" | "gallery" | "contact-us";
@@ -46,15 +47,8 @@ const { activeNav } = Astro.props;
   </div>
 
   <!-- Bottom Header Navigation -->
-  <div class="container px-4 flex justify-between sm:items-center">
-    <a href="/" class="">
-      <Image
-        alt={"sd"}
-        src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703912088/logos/fb10n60uzloadt3ay6jx.png"}
-        height={60}
-        width={60}
-      />
-    </a>
+  <div class="container px-4 py-2 flex justify-between sm:items-center">
+    <Logo />
     <nav class="flex justify-end gap-4">
       <!-- Hamburger -->
       <button
