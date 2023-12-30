@@ -40,6 +40,15 @@ export default defineConfig({
       wrap: true
     }
   },
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+     speedInsights: {
+      enabled: true,
+    },
+  }),
   vite: {
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"]
