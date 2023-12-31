@@ -79,7 +79,7 @@ import { Image } from "astro:assets";
             </p>
           </div>
 
-          <div class="flex gap-12 mt-8">
+          <div class="flex justify-between gap-12 mt-8 mr-8">
             <div class="flex flex-col mt-4 items-center gap-1">
               <h2 class="font-bold text-4xl">40+</h2>
               <small>Teachers</small>
@@ -110,16 +110,33 @@ import { Image } from "astro:assets";
           subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis quo impedit velit quisquam iste!"
         />
         <div class="grid gap-12">
-          <VisionCard />
-          <VisionCard />
-          <VisionCard />
-          <VisionCard />
+          <VisionCard
+            number="1"
+            title="Academic Excellence and Innovation"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore similique quas odit ratione, reprehenderit sint ducimus magni nostrum iste nobis nemo sed, saepe natus officia est incidunt. Quas ullam perspiciatis corrupti officiis exercitationem ut culpa praesentium, fugiat rem debitis commodi labore tempore qui hic modi vitae nostrum et."
+          />
+          <VisionCard
+            number="2"
+            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore similique quas odit ratione, reprehenderit sint ducimus magni nostrum iste nobis nemo sed, saepe natus officia est incidunt. Quas ullam perspiciatis corrupti officiis exercitationem ut culpa praesentium, fugiat rem debitis commodi labore tempore qui hic modi vitae nostrum et."
+          />
+          <VisionCard
+            number="3"
+            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore similique quas odit ratione, reprehenderit sint ducimus magni nostrum iste nobis nemo sed, saepe natus officia est incidunt. Quas ullam perspiciatis corrupti officiis exercitationem ut culpa praesentium, fugiat rem debitis commodi labore tempore qui hic modi vitae nostrum et."
+          />
+          <VisionCard
+            number="4"
+            title="Athletic Excellence and Sportmanship"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore similique quas odit ratione, reprehenderit sint ducimus magni nostrum iste nobis nemo sed, saepe natus officia est incidunt. Quas ullam perspiciatis corrupti officiis exercitationem ut culpa praesentium, fugiat rem debitis commodi labore tempore qui hic modi vitae nostrum et."
+          />
         </div>
       </div>
     </section>
 
     <!-- Our History -->
-    <section class="mb-24 px-6 py-8 sm:py-24 h-max sm:px-0">
+
+    <section class="mb-12 px-6 py-8 sm:py-24 h-max sm:px-0">
       <div class="container">
         <AboutSection
           title="Our history"
@@ -128,7 +145,7 @@ import { Image } from "astro:assets";
         <div
           class="prose mt-8 prose-p:text-gray-600 max-w-none prose-p:text-lg"
         >
-          <p>
+          <p class="!leading-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id itaque
             at dignissimos, ex ut nulla quos corrupti, consectetur voluptas
             dolore reprehenderit neque illum, iste ducimus possimus in! Quam,
@@ -147,7 +164,7 @@ import { Image } from "astro:assets";
             exercitationem!
           </p>
 
-          <p>
+          <p class="!leading-8">
             Ullam impedit molestiae saepe at consequatur dolorum facere
             quibusdam magnam nam ex! Sit reiciendis voluptates libero veniam
             omnis earum magnam fugit deserunt eaque officia? Assumenda aliquam
@@ -227,6 +244,7 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
+
     <CTASection />
   </main>
 </Layout>
