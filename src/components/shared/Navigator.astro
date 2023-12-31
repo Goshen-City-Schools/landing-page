@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { direction, isActive } = Astro.props;
+---
+
+<div class="arrows flex gap-3">
+  <div
+    class={`h-12 w-12 ${
+      isActive ? "bg-purple-500 text-white" : "bg-purple-50 text-gray-500"
+    }  rounded-full grid place-items-center`}
+  >
+    <Icon name={`mdi:arrow-${direction}`} />
+  </div>
+</div>

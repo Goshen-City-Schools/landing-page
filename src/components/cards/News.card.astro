@@ -4,19 +4,41 @@ import { motion, AnimatePresence } from "framer-motion";
 ---
 
 <AnimatePresence>
-  <div class="newsCard w-full max-w-sm">
-    <div class="imgContainer h-[200px] shadow-sm rounded-3xl">
+  <div
+    class="newsCard w-full max-w-sm rounded-3xl hover:cursor-pointer border border-transparent hover:scale-105 transition duration-200"
+  >
+    <div class="imgContainer bg-slate-50 h-[280px] rounded-3xl">
       <Image
-        src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703912088/logos/fb10n60uzloadt3ay6jx.png"}
+        src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
         height={320}
         width={320}
         class={"img object-cover"}
         alt={"Goshen news"}
       />
     </div>
-    <div class="flex justify-between px-2">
-      <small>3 hours ago</small>
-      <small>4 mins read</small>
+    <div
+      class="flex justify-between py-2 mb-1 opacity-95 font-bold text-gray-700"
+    >
+      <p class="text-sm">3 hours ago</p>
+      <p class="text-sm">4 mins read</p>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <h2 class="font-bold text-xl line-clamp-2 text-justify">
+        Goshen News Title Long enough to another
+      </h2>
+
+      <p class="line-clamp-4 leading-7">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+        aperiam, accusamus eligendi ea impedit aliquid reprehenderit a
+        perferendis? Dolor, distinctio consequatur nostrum sequi corrupti iure.
+      </p>
+
+      <a
+        href="/news"
+        class="font-bold prose mb-2 flex text-purple-500 underline-offset-4 underline"
+        >Read More
+      </a>
     </div>
   </div>
 </AnimatePresence>

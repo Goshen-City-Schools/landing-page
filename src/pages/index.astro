@@ -6,6 +6,10 @@ import FlippableGridView from "../components/shared/FlippableGridView.astro";
 import TestimonialCard from "../components/cards/TestimonialCard.astro";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+import Navigator from "@components/shared/Navigator.astro";
+import Indicator from "@components/shared/Indicator.astro";
+import GalleryCard from "@components/cards/GalleryCard.astro";
+import Button from "@components/shared/Button.astro";
 ---
 
 <Layout activeNav="/">
@@ -27,11 +31,7 @@ import { Image } from "astro:assets";
             similique.
           </p>
 
-          <button
-            class="flex gap-4 font-bold justify-center items-center bg-blue-950 w-max rounded-[48px] px-6 py-3 text-white"
-          >
-            Enroll Today <Icon name={"mdi:arrow-right"} />
-          </button>
+          <Button text="Enroll Today" iconName="arrow-right" color="blue" />
         </div>
 
         <!-- Illustration -->
@@ -96,7 +96,7 @@ import { Image } from "astro:assets";
 
     <!-- About Us -->
 
-    <section class="bg-gray-100 py-6 mt-20 pb-24">
+    <section class="bg-gray-100 py-6 mt-20 mb-24 pb-24">
       <div class="container mb-12 pt-8">
         <p class="text-purple-700 font-bold tracking-wide mb-5">ABOUT US</p>
       </div>
@@ -120,11 +120,7 @@ import { Image } from "astro:assets";
           </p>
         </div>
 
-        <button
-          class="flex gap-4 font-bold justify-center items-center bg-purple-700 w-max rounded-[48px] px-6 py-4 text-white"
-        >
-          Learn more<Icon name={"mdi:arrow-right"} />
-        </button>
+        <Button text="Learn more" iconName="arrow-right" />
 
         <div
           class="prose p-12 bg-purple-700 max-w-6xl mt-24 rounded-3xl w-full"
@@ -143,7 +139,7 @@ import { Image } from "astro:assets";
 
     <!-- Why Choose Us -->
 
-    <section class="py-8">
+    <section class="py-8 mb-24">
       <div class="container mb-4">
         <p class="text-purple-700 font-bold tracking-wide mb-5">
           WHY CHOOSE US
@@ -161,7 +157,7 @@ import { Image } from "astro:assets";
 
     <!-- Gallery-->
 
-    <section class="py-8 relative h-[88vh] grid items-center">
+    <section class="py-8 relative grid items-center overflow-hidden mb-24">
       <div class="container mb-12 flex justify-between items-end">
         <div class="">
           <p class="text-purple-700 font-bold tracking-wide mb-5">GALLERY</p>
@@ -169,49 +165,37 @@ import { Image } from "astro:assets";
         </div>
         <!-- Gallery arrow Navigation -->
         <div class="arrows flex gap-3">
-          <div
-            class="h-12 w-12 bg-purple-100 text-gray-500 rounded-full grid place-items-center"
-          >
-            <Icon name={"mdi:arrow-left"} />
-          </div>
-          <div
-            class="h-12 w-12 bg-purple-500 text-white rounded-full grid place-items-center"
-          >
-            <Icon name={"mdi:arrow-right"} />
-          </div>
-        </div>
-      </div>
-      <div class="grid grid-cols-3">
-        <div class="imgContainer h-[350px] w-full">
-          <Image
-            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
-            height={320}
-            width={320}
-            alt={"Goshen Gallery Images Preview"}
-            class={"img object-cover"}
-          />
-        </div>
-        <div class="imgContainer h-[350px] w-full">
-          <Image
-            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
-            height={320}
-            width={320}
-            alt={"Goshen Gallery Images Preview"}
-            class={"img object-cover"}
-          />
-        </div>
-        <div class="imgContainer h-[350px] w-full">
-          <Image
-            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
-            height={320}
-            width={320}
-            alt={"Goshen Gallery Images Preview"}
-            class={"img object-cover"}
-          />
+          <Navigator direction="left" isActive="true" />
+
+          <Navigator direction="right" />
         </div>
       </div>
 
-      <div
+      <div class="grid grid-cols-3 h-[76vh] items-center">
+        <GalleryCard
+          imgSrc={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+        />
+        <GalleryCard
+          isScaled
+          imgSrc={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+        />
+        <GalleryCard
+          imgSrc={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+        />
+      </div>
+
+      <div class="container grid justify-center gap-12">
+        <div class="flex gap-2 justify-center">
+          <Indicator />
+          <Indicator isActive />
+          <Indicator />
+        </div>
+
+        <Button text="View All" iconName="arrow-right" />
+      </div>
+
+      <!--
+        <div
         class="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-30%] image-display h-[60vh] w-[85vh]"
       >
         <div
@@ -225,12 +209,12 @@ import { Image } from "astro:assets";
             src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
           />
         </div>
-      </div>
+      </Button> -->
     </section>
 
     <!-- Founders / Director Speech -->
 
-    <section class="py-8 pb-24">
+    <section class="py-8 mb-24">
       <div class="container mb-12">
         <p class="text-purple-700 font-bold tracking-wide mb-5">
           FOUNDER/DIRECTORS
@@ -298,28 +282,29 @@ import { Image } from "astro:assets";
 
         <!-- Testimonies Navigation arrows -->
         <div class="arrows flex gap-3">
-          <div
-            class="h-12 w-12 bg-purple-100 text-gray-500 rounded-full grid place-items-center"
-          >
-            <Icon name={"mdi:arrow-left"} />
-          </div>
-          <div
-            class="h-12 w-12 bg-purple-500 text-white rounded-full grid place-items-center"
-          >
-            <Icon name={"mdi:arrow-right"} />
-          </div>
+          <Navigator direction="left" />
+
+          <Navigator direction="right" isActive="true" />
         </div>
       </div>
       <div class="container grid sm:grid-cols-2 gap-4 sm:gap-8">
         <TestimonialCard />
         <TestimonialCard />
       </div>
+
+      <div class="mt-16 flex gap-2 justify-center">
+        <Indicator />
+        <Indicator />
+        <Indicator isActive />
+        <Indicator />
+        <Indicator />
+      </div>
     </section>
   </main>
 
   <!-- News and Updates -->
 
-  <section class="py-8">
+  <section class="py-8 mb-24">
     <div class="container mb-12 flex justify-between items-end">
       <div class="">
         <p class="text-purple-700 font-bold tracking-wide mb-5">
@@ -328,19 +313,44 @@ import { Image } from "astro:assets";
         <h3 class="text-lg font-bold">Check out our latest News and Updates</h3>
       </div>
 
-      <a href="/news" class="text-purple-700 font-bold flex gap-2 items-center"
+      <a
+        href="/news"
+        class="text-purple-700 font-bold flex gap-2 text-[18px] items-center"
         >See all <Icon name={"mdi:arrow-right"} /></a
       >
     </div>
 
-    <div class="container">
+    <div class="container grid grid-cols-3 gap-8">
+      <NewsCard />
+      <NewsCard />
       <NewsCard />
     </div>
   </section>
 
   <!-- CTA -->
 
-  <section></section>
+  <section id="ctaSection" class="h-[40vh]">
+    <div class="container h-full flex gap-8 items-center grid-cols-[1fr auto]">
+      <div class="flex-grow">
+        <div class="prose max-w-3xl">
+          <h1 class="text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+            itaque.
+          </h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+            aliquam perferendis eius, optio eum totam expedita dolore ut velit
+            accusamus alias? Fugit, debitis et? Fugiat explicabo iure ea.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0">
+        <Button text="Get Started" iconName="arrow-right" />
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -349,5 +359,14 @@ import { Image } from "astro:assets";
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+  }
+
+  #ctaSection {
+    background-image: url("https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703928891/banners/q8e1017bw0v3owa8gwh7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.76);
   }
 </style>

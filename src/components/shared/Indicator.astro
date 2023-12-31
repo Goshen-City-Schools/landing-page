@@ -1,0 +1,10 @@
+---
+const { isActive } = Astro.props;
+---
+
+<div
+  class={`h-[18px] w-[18px] border border-purple-300 ${
+    isActive ? "bg-purple-500 text-white" : "bg-purple-50 text-gray-500"
+  }  rounded-full grid place-items-center`}
+>
+</div>

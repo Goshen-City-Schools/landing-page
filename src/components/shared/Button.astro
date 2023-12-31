@@ -1,0 +1,11 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { iconName, text, color } = Astro.props;
+---
+
+<button
+  class=`flex gap-4 font-bold justify-center items-center ${color === 'blue'? 'bg-blue-950': "bg-purple-700"}  w-max rounded-[48px] px-6 py-3 text-white`
+>
+  {text}<Icon name={`mdi:${iconName}`} />
+</button>
