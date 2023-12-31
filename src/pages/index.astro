@@ -59,7 +59,7 @@ import CTASection from "../components/sections/CTASection.astro";
           <div
             class="flex flex-col px-2 prose w-full justify-center items-center text-center gap-2"
           >
-            <h3 class="not-italic text-white">Creche</h3>
+            <h3 class="not-italic text-white text-2xl">Creche</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae, itaque maiores veritatis hic perferendis vel.
@@ -69,7 +69,7 @@ import CTASection from "../components/sections/CTASection.astro";
           <div
             class="flex flex-col px-2 prose w-full justify-center items-center text-center gap-2"
           >
-            <h3 class="not-italic text-white">Nursery</h3>
+            <h3 class="not-italic text-white text-2xl">Nursery</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae, itaque maiores veritatis hic perferendis vel.
@@ -79,7 +79,7 @@ import CTASection from "../components/sections/CTASection.astro";
           <div
             class="flex flex-col px-2 prose w-full justify-center items-center text-center gap-2"
           >
-            <h3 class="not-italic text-white">Basic</h3>
+            <h3 class="not-italic text-white text-2xl">Basic</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae, itaque maiores veritatis hic perferendis vel.
@@ -88,7 +88,7 @@ import CTASection from "../components/sections/CTASection.astro";
           <div
             class="flex flex-col px-2 prose w-full justify-center items-center text-center gap-2"
           >
-            <h3 class="not-italic text-white">Secondary</h3>
+            <h3 class="not-italic text-white text-2xl">Secondary</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae, itaque maiores veritatis hic perferendis vel.
@@ -141,7 +141,7 @@ import CTASection from "../components/sections/CTASection.astro";
 
     <!-- Why Choose Us -->
 
-    <section class="sm:py-24 py-12 px-6 sm:px-0">
+    <section class="sm:py-0 py-10 px-6 sm:px-0">
       <AboutSection
         classes="container mb-4"
         title={"Why choose us"}
@@ -239,16 +239,16 @@ import CTASection from "../components/sections/CTASection.astro";
           />
         </div>
 
-        <div class="">
-          <div class="flex flex-col gap-1 prose">
-            <h2>
-              "Train up a child in the way he should go and when he is old, he
-              will not depart from it."
-            </h2>
-            <span class="font-bold">Proverbs 22:6</span>
-          </div>
+        <div
+          class="flex flex-col prose prose-headings:my-0 prose-p:text-gray-600"
+        >
+          <h2>
+            "Train up a child in the way he should go and when he is old, he
+            will not depart from it."
+          </h2>
+          <p class="font-bold !text-xl !mb-0 mt-2">Proverbs 22:6</p>
 
-          <p class="text-gray-700 line-clamp-7 prose mb-3">
+          <p class="text-gray-700 line-clamp-7 prose !mb-0 max-w-none">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
             voluptates tempore fugiat autem quisquam tenetur explicabo
             laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
@@ -261,7 +261,7 @@ import CTASection from "../components/sections/CTASection.astro";
 
           <a
             href="/about"
-            class="font-bold prose mb-2 flex text-purple-500 underline-offset-4 underline"
+            class="font-bold mb-4 mt-2 text-lg flex text-purple-500 underline-offset-4 underline py-0"
             >Read More
           </a>
 
@@ -338,5 +338,8 @@ import CTASection from "../components/sections/CTASection.astro";
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+  }
+  .prose {
+    max-width: none;
   }
 </style>
