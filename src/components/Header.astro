@@ -3,7 +3,6 @@
 
 import { SITE } from "../config";
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
 import Logo from "./shared/Logo.astro";
 
 export interface Props {
@@ -16,7 +15,7 @@ const { activeNav } = Astro.props;
 <header class="border-b-2">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <!-- Top Header navigation -->
-  <div class="bg-purple-900 text-white">
+  <div class="bg-purple-900 text-white sm:block hidden">
     <div
       class="container px-4 items-center py-4 grid grid-cols-3 justify-between"
     >

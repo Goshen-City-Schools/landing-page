@@ -6,13 +6,15 @@ import { SITE } from "../config";
 ---
 
 <Layout activeNav="contact-us">
-  <main class="bg-black">
+  <main class="bg-black py-12 sm:py-24 px-8">
     <div class="container bg-white">
-      <div class="mx-auto w-full max-w-xl py-12">
-        <h1 class="font-bold text-xl text-center">Get in touch with Us</h1>
+      <div class="mx-auto w-full max-w-xl py-24">
+        <h1 class="font-bold text-2xl text-center mb-8">
+          Get in touch with Us
+        </h1>
         <!-- Contact form -->
         <form action="">
-          <div class="flex w-full gap-4">
+          <div class="flex flex-col sm:flex-row w-full gap-4">
             <!-- Firstname -->
             <div class="formControl">
               <label for="fName">First Name</label>
@@ -46,23 +48,24 @@ import { SITE } from "../config";
 
           <Button
             text="Send"
-            cla
             color="blue"
             iconName="send"
-            classes="mx-auto"
+            classes="mx-auto mt-6"
           />
         </form>
 
         <!--  -->
-        <div class="p-6 pt-12 mt-4 relative border-gray-400 border-t">
+        <div
+          class="mt-8 py-12 px-8 sm:px-0 pt-20 relative border-gray-400 border-t"
+        >
           <p
-            class="font-bold shadow-sm rounded-sm absolute top-[-18px] left-[50%] -translate-x-[50%] px-6 py-2 bg-white"
+            class="text-2xl font-bold shadow-sm rounded-sm absolute top-[-18px] left-[50%] -translate-x-[50%] px-6 py-2 bg-white"
           >
             or
           </p>
 
           <div class="">
-            <h1 class="mb-6 font-bold text-lg text-center text-gray-700">
+            <h1 class="mb-12 font-bold text-2xl text-center text-gray-700">
               Reach out to us @
             </h1>
 
