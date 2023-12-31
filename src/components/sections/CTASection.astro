@@ -1,0 +1,39 @@
+---
+import Button from "../../components/shared/Button.astro";
+---
+
+<section id="ctaSection" class="min-h-[40vh] px-6 py-12 sm:py-24 sm:px-0">
+  <div
+    class="container h-full flex flex-col sm:flex-row gap-8 items-center grid-cols-[1fr auto]"
+  >
+    <div class="flex-grow">
+      <div class="prose text-center sm:text-left sm:max-w-3xl">
+        <h1 class="text-white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+          itaque.
+        </h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+          aliquam perferendis eius, optio eum totam expedita dolore ut velit
+          accusamus alias? Fugit, debitis et? Fugiat explicabo iure ea.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-shrink-0">
+      <Button text="Get Started" iconName="arrow-right" color="purple" />
+    </div>
+  </div>
+</section>
+
+<style>
+  #ctaSection {
+    background-image: url("https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703928891/banners/q8e1017bw0v3owa8gwh7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.76);
+  }
+</style>

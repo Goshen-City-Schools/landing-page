@@ -141,7 +141,7 @@
 .container{ @apply w-full mx-auto max-w-[1200px]}
 
 main{
- @apply min-h-screen py-6 w-full
+ @apply min-h-screen  w-full
 }
 
 .imgContainer {position: relative; overflow: hidden;}

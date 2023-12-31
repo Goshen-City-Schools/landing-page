@@ -1,11 +1,241 @@
 ---
+import CTASection from "../components/sections/CTASection.astro";
+import VisionCard from "../components/cards/VisionCard.astro";
 import Layout from "../layouts/Layout.astro";
+import AboutSection from "@components/shared/AboutSection.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout activeNav="about">
   <main>
-    <div class="container">
-      <h1>About</h1>
-    </div>
+    <section class="mb-24 py-10 sm:py-16">
+      <AboutSection
+        title="about us"
+        subtitle="Welcome to Goshen Group of Schools"
+        classes="container mb-10 sm:mb-16 px-6 sm:px-0"
+      />
+
+      <div
+        class="illustation-image__about sm:h-[79vh] h-[340px] mb-16 sm:mb-32"
+      >
+      </div>
+
+      <div
+        class="container prose px-6 sm:px-0 prose-h2:text-4xl prose-p:text-lg p-12 bg-purple-700 max-w-none sm:mt-24 mt-16 sm:rounded-3xl rounded-2xl w-full"
+      >
+        <h2 class="text-white">Our Mission</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          pariatur optio possimus delectus! Repellendus voluptatibus magni,
+          laboriosam, autem dignissimos perferendis debitis provident deserunt
+          nemo maiores est asperiores voluptatum. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Vision -->
+    <section class="px-6 py-8 sm:py-24 sm:px-0">
+      <div
+        class="container flex flex-col sm:flex-row gap-4 sm:h-[78vh] items-center sm:gap-8"
+      >
+        <div
+          class="w-full sm:w-[50%] h-[320px] sm:h-[74vh] sm:rounded-3xl rounded-2xl overflow-hidden flex-shrink-0 relative"
+        >
+          <Image
+            class={"absolute h-full w-full object-cover"}
+            height={300}
+            width={300}
+            alt={"Goshen Founder"}
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+          />
+        </div>
+
+        <div class="">
+          <div
+            class="flex flex-col gap-1 prose prose-p:text-lg max-w-none prose-headings:mb-1 prose-p:text-gray-600"
+          >
+            <p class="text-gray-700 !mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              voluptates tempore fugiat autem quisquam tenetur explicabo
+              laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
+              aspernatur eum, reprehenderit molestias distinctio alias maiores
+            </p>
+
+            <p class="text-gray-700 !mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              voluptates tempore fugiat autem quisquam tenetur explicabo
+              laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
+              aspernatur eum, reprehenderit molestias distinctio alias maiores
+              enim labore obcaecati.
+            </p>
+
+            <p class="text-gray-700 !mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              voluptates tempore fugiat autem quisquam tenetur explicabo
+              laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
+              aspernatur eum, reprehenderit molestias distinctio alias maiores
+              enim labore obcaecati.
+            </p>
+          </div>
+
+          <div class="flex gap-12 mt-8">
+            <div class="flex flex-col mt-4 items-center gap-1">
+              <h2 class="font-bold text-4xl">40+</h2>
+              <small>Teachers</small>
+            </div>
+            <div class="flex flex-col mt-4 items-center gap-1">
+              <h2 class="font-bold text-4xl">2k</h2>
+              <small>Students</small>
+            </div>
+            <div class="flex flex-col mt-4 items-center gap-1">
+              <h2 class="font-bold text-4xl">A+</h2>
+              <small>Accreditation</small>
+            </div>
+            <div class="flex flex-col mt-4 items-center gap-1">
+              <h2 class="font-bold text-4xl">10yrs</h2>
+              <small>Experience</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Vision -->
+    <section class="bg-slate-50 px-6 py-8 sm:py-24 sm:px-0">
+      <div class="container">
+        <AboutSection
+          classes="mb-12"
+          title="Our vision"
+          subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis quo impedit velit quisquam iste!"
+        />
+        <div class="grid gap-12">
+          <VisionCard />
+          <VisionCard />
+          <VisionCard />
+          <VisionCard />
+        </div>
+      </div>
+    </section>
+
+    <!-- Our History -->
+    <section class="mb-24 px-6 py-8 sm:py-24 h-max sm:px-0">
+      <div class="container">
+        <AboutSection
+          title="Our history"
+          subtitle="Driving Excellence in Education"
+        />
+        <div
+          class="prose mt-8 prose-p:text-gray-600 max-w-none prose-p:text-lg"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id itaque
+            at dignissimos, ex ut nulla quos corrupti, consectetur voluptas
+            dolore reprehenderit neque illum, iste ducimus possimus in! Quam,
+            voluptates magni. Adipisci in cupiditate nostrum modi maxime ipsam
+            dignissimos voluptatem assumenda, esse optio aspernatur sed fugit
+            nemo explicabo nesciunt ipsa, mollitia necessitatibus placeat, ex
+            temporibus vitae iure. Vitae incidunt voluptates harum non adipisci
+            aliquid consequatur voluptatibus molestiae ipsam eveniet officia
+            dolorum assumenda repudiandae odit neque sit suscipit sequi in,
+            voluptas, dignissimos rem expedita quia architecto. Dignissimos, ea
+            doloribus dolore molestiae ex et rerum sint neque non. Tempore sint
+            assumenda temporibus dolore sunt obcaecati laboriosam ducimus
+            debitis quidem, cum eum! Ipsum rem est beatae molestias! Expedita
+            debitis velit rem eveniet libero blanditiis explicabo iste soluta
+            deserunt sit iusto ipsum laborum consectetur numquam in dicta, neque
+            exercitationem!
+          </p>
+
+          <p>
+            Ullam impedit molestiae saepe at consequatur dolorum facere
+            quibusdam magnam nam ex! Sit reiciendis voluptates libero veniam
+            omnis earum magnam fugit deserunt eaque officia? Assumenda aliquam
+            asperiores adipisci aut beatae ipsam voluptatem praesentium
+            perspiciatis expedita mollitia! Itaque tempora molestiae nostrum
+            reprehenderit, perferendis esse unde saepe natus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founders / Director Speech -->
+
+    <section class="mb-12 sm:mb-24 sm:py-24 py-12 px-6 sm:px-0">
+      <AboutSection
+        title="FOUNDER/DIRECTORS"
+        subtitle="Meet Our Director"
+        classes="container mb-12"
+      />
+
+      <div
+        class="container flex flex-col sm:flex-row gap-4 sm:h-[78vh] items-center sm:gap-8"
+      >
+        <div
+          class="w-[320px] sm:w-[38%] h-[320px] sm:h-full sm:rounded-3xl rounded-2xl overflow-hidden flex-shrink-0 relative"
+        >
+          <Image
+            class={"absolute h-full w-full object-cover"}
+            height={300}
+            width={300}
+            alt={"Goshen Founder"}
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+          />
+        </div>
+
+        <div class="">
+          <div
+            class="flex flex-col gap-1 prose prose-p:text-lg max-w-none prose-headings:mb-1 prose-p:text-gray-600"
+          >
+            <h2>
+              "Train up a child in the way he should go and when he is old, he
+              will not depart from it."
+            </h2>
+            <p class="font-bold !text-xl !mb-0">Proverbs 22:6</p>
+
+            <p class="text-gray-700 !mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              voluptates tempore fugiat autem quisquam tenetur explicabo
+              laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
+              aspernatur eum, reprehenderit molestias distinctio alias maiores
+            </p>
+
+            <p class="text-gray-700 !mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              voluptates tempore fugiat autem quisquam tenetur explicabo
+              laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
+              aspernatur eum, reprehenderit molestias distinctio alias maiores
+              enim labore obcaecati. Amet quaerat excepturi, illo iure esse
+              perferendis earum nam porro architecto cupiditate voluptates
+              consectetur sapiente? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
+            </p>
+
+            <p class="text-gray-700 !mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              voluptates tempore fugiat autem quisquam tenetur explicabo
+              laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
+              aspernatur eum, reprehenderit molestias distinctio alias maiores
+              enim labore obcaecati.
+            </p>
+          </div>
+
+          <div class="flex flex-col mt-4">
+            <h2 class="font-bold text-2xl">OKAKE, IFEOMA CHINWE</h2>
+            <p>Director/Founder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <CTASection />
   </main>
 </Layout>
+
+<style>
+  .illustation-image__about {
+    background-image: url("https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703928891/banners/q8e1017bw0v3owa8gwh7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+</style>

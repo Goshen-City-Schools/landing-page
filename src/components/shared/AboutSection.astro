@@ -3,8 +3,8 @@ const { title, subtitle, classes } = Astro.props;
 ---
 
 <div class={`${classes}`}>
-  <p class="text-purple-700 font-bold tracking-wide mb-4 text-lg uppercase">
+  <p class="text-purple-700 font-bold tracking-wide mb-3 text-lg uppercase">
     {title}
   </p>
-  <h3 class="text-2xl text-gray-700 font-semibold">{subtitle}</h3>
+  <h3 class="text-2xl max-w-2xl text-gray-700 font-semibold">{subtitle}</h3>
 </div>
