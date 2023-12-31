@@ -2,20 +2,122 @@
 import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 import NewsCard from "../components/cards/News.card.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout activeNav="news">
   <main>
     <div class="container">
       <!-- News and Updates -->
-      <section class="mb-24 px-6 py-8 sm:px-0"><h1>News</h1></section>
+      <section class="mb-24 px-6 py-8 sm:px-0">
+        <div
+          class="featured-image sm:h-[76vh] h-[320px] relative sm:rounded-3xl rounded-2xl overflow-hidden"
+        >
+          <Image
+            loading={"lazy"}
+            height={400}
+            width={1200}
+            alt={"News descrition"}
+            class={"absolute h-full w-full object-cover"}
+            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+          />
+        </div>
+
+        <div
+          class="flex justify-between py-6 opacity-95 font-bold text-gray-700"
+        >
+          <p class="text-sm">3 hours ago</p>
+          <p class="text-sm">4 mins read</p>
+        </div>
+
+        <div class="flex flex-col gap-1 prose max-w-none mt-10">
+          <h1 class="font-[600] mb-2 text-gray-600">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+            optio accusamus ipsum possimus ullam modi.
+          </h1>
+
+          <p class="text-gray-700 leading-8 text-lg">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            aperiam, accusamus eligendi ea impedit aliquid reprehenderit a
+            perferendis? Dolor, distinctio consequatur nostrum sequi corrupti
+            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repellat voluptatibus praesentium provident aliquam nisi dolores
+            unde itaque ad tenetur beatae eligendi, facilis accusamus quis
+            repudiandae. Reprehenderit sit repellat vel deserunt adipisci, quasi
+            nostrum amet porro ipsa alias quidem autem fugit repellendus
+            placeat, vero numquam sed officiis debitis nam, incidunt beatae
+            magnam? Sint amet modi ipsum! Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Ex non laudantium consectetur
+            repellendus ad maxime, sint eos ipsam? Molestias repellendus dolore
+            ea, vero cupiditate dicta eos sequi natus molestiae debitis non
+            tempora dignissimos perspiciatis temporibus veniam atque distinctio
+            hic fugiat vel odio voluptates. Blanditiis possimus odit corporis in
+            vel praesentium magni asperiores repellat, molestias placeat
+            nesciunt perspiciatis. Provident sit eum earum reiciendis excepturi
+            illum nam pariatur quod aut ipsum magni alias hic suscipit velit
+            perspiciatis totam nihil dolores quo praesentium, tempora sequi
+            quam. Ab hic porro illo obcaecati ipsum cum asperiores voluptatum
+            nulla amet, similique, maxime odio voluptas quas quae.
+          </p>
+
+          <p class="text-gray-700 leading-8 text-lg">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            aperiam, accusamus eligendi ea impedit aliquid reprehenderit a
+            perferendis? Dolor, distinctio consequatur nostrum sequi corrupti
+            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repellat voluptatibus praesentium provident aliquam nisi dolores
+            unde itaque ad tenetur beatae eligendi, facilis accusamus quis
+            repudiandae. Reprehenderit sit repellat vel deserunt adipisci, quasi
+            nostrum amet porro ipsa alias quidem autem fugit repellendus
+            placeat, vero numquam sed officiis debitis nam, incidunt beatae
+            magnam? Sint amet modi ipsum! Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Ex non laudantium consectetur
+            repellendus ad maxime, sint eos ipsam? Molestias repellendus dolore
+            ea, vero cupiditate dicta eos sequi natus molestiae debitis non
+            tempora dignissimos perspiciatis temporibus veniam atque distinctio
+            hic fugiat vel odio voluptates. Blanditiis possimus odit corporis in
+            vel praesentium magni asperiores repellat, molestias placeat
+            nesciunt perspiciatis. Provident sit eum earum reiciendis excepturi
+            illum nam pariatur quod aut ipsum magni alias hic suscipit velit
+            perspiciatis totam nihil dolores quo praesentium, tempora sequi
+            quam. Ab hic porro illo obcaecati ipsum cum asperiores voluptatum
+            nulla amet, similique, maxime odio voluptas quas quae.
+          </p>
+
+          <p class="text-gray-700 leading-8 text-lg">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            aperiam, accusamus eligendi ea impedit aliquid reprehenderit a
+            perferendis? Dolor, distinctio consequatur nostrum sequi corrupti
+            iure. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repellat voluptatibus praesentium provident aliquam nisi dolores
+            unde itaque ad tenetur beatae eligendi, facilis accusamus quis
+            repudiandae. Reprehenderit sit repellat vel deserunt adipisci, quasi
+            nostrum amet porro ipsa alias quidem autem fugit repellendus
+            placeat, vero numquam sed officiis debitis nam, incidunt beatae
+            magnam? Sint amet modi ipsum! Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Ex non laudantium consectetur
+            repellendus ad maxime, sint eos ipsam? Molestias repellendus dolore
+            ea, vero cupiditate dicta eos sequi natus molestiae debitis non
+            tempora dignissimos perspiciatis temporibus veniam atque distinctio
+            hic fugiat vel odio voluptates. Blanditiis possimus odit corporis in
+            vel praesentium magni asperiores repellat, molestias placeat
+            nesciunt perspiciatis. Provident sit eum earum reiciendis excepturi
+            illum nam pariatur quod aut ipsum magni alias hic suscipit velit
+            perspiciatis totam nihil dolores quo praesentium, tempora sequi
+            quam. Ab hic porro illo obcaecati ipsum cum asperiores voluptatum
+            nulla amet, similique, maxime odio voluptas quas quae.
+          </p>
+        </div>
+      </section>
       <section class="mb-24 px-6 py-8 sm:px-0">
         <div class="mb-12 flex justify-between items-end">
           <div class="">
-            <p class="text-purple-700 font-bold tracking-wide mb-5">
+            <p
+              class="text-purple-700 font-bold tracking-wide mb-4 text-lg uppercase"
+            >
               More News
             </p>
-            <h3 class="text-lg font-bold">Explore More News and Updates</h3>
+            <h3 class="text-2xl font-bold">Explore More News and Updates</h3>
           </div>
 
           <a
