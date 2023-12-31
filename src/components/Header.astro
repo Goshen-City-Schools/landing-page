@@ -21,21 +21,21 @@ const { activeNav } = Astro.props;
       class="container px-4 items-center py-4 grid grid-cols-3 justify-between"
     >
       <a
-        class="leading-tight flex gap-3"
+        class="leading-tight flex gap-3 text-sm"
         href={SITE.location.link}
         target="_blank"
         rel="noopener noreferrer"
         ><div class="text-[18px]">
           <Icon name={"mdi:location-outline"} />
         </div>
-        <p class="font-bold tracking-wide">{SITE.location.address}</p>
+        <p class="font-bold">{SITE.location.address}</p>
       </a>
 
       <a
         href="tel:+2348036960509"
         class="flex gap-2 items-center justify-center w-full"
         ><Icon name={"mdi:phone"} />
-        <p class="font-bold -tracking-wide">08036960509</p>
+        <p class="font-bold tracking-wider">08036960509</p>
       </a>
 
       <div class="socials flex gap-4 mx-auto w-full justify-end">
