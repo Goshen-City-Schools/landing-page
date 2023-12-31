@@ -1,9 +1,133 @@
 ---
+import { Icon } from "astro-icon/components";
+import Button from "../components/shared/Button.astro";
 import Layout from "../layouts/Layout.astro";
+import { SITE } from "../config";
 ---
 
 <Layout activeNav="contact-us">
-  <main>
-    <div class="container"><h1>Contact Us</h1></div>
+  <main class="bg-black">
+    <div class="container bg-white">
+      <div class="mx-auto w-full max-w-xl py-12">
+        <h1 class="font-bold text-xl text-center">Get in touch with Us</h1>
+        <!-- Contact form -->
+        <form action="">
+          <div class="flex w-full gap-4">
+            <!-- Firstname -->
+            <div class="formControl">
+              <label for="fName">First Name</label>
+
+              <input class="border" name="fName" type="text" />
+            </div>
+
+            <!-- Last name -->
+            <div class="formControl">
+              <label for="lName">Last Name</label>
+
+              <input class="border" name="lName" type="text" />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="formControl">
+            <label for="email">Enter email</label>
+
+            <input class="border" name="email" type="email" />
+          </div>
+
+          <!-- Phone Number -->
+          <div class="formControl">
+            <label for="phoneNumber">Phone number</label>
+
+            <input class="border" name="phoneNumber" type="tel" />
+          </div>
+
+          <!-- Submit form -->
+
+          <Button
+            text="Send"
+            cla
+            color="blue"
+            iconName="send"
+            classes="mx-auto"
+          />
+        </form>
+
+        <!--  -->
+        <div class="p-6 pt-12 mt-4 relative border-gray-400 border-t">
+          <p
+            class="font-bold shadow-sm rounded-sm absolute top-[-18px] left-[50%] -translate-x-[50%] px-6 py-2 bg-white"
+          >
+            or
+          </p>
+
+          <div class="">
+            <h1 class="mb-6 font-bold text-lg text-center text-gray-700">
+              Reach out to us @
+            </h1>
+
+            <div
+              class="mb-6 text-gray-700 flex flex-col gap-4 md:gap-6 text-sm"
+            >
+              <!-- School Location -->
+              <a href={SITE.location.link} class="flex gap-3">
+                <Icon size={12} height={16} name={"mdi:location"} />
+
+                <p>{SITE.location.address}</p>
+              </a>
+
+              <!-- School Phone Number -->
+              <a href=`mailto:${SITE.email}` class="flex gap-3">
+                <Icon size={4} height={4} name={"mdi:phone"} />
+
+                <p>08036960509</p>
+              </a>
+
+              <!-- School Email -->
+              <a href=`mailto:${SITE.email}` class="flex gap-3">
+                <Icon size={4} height={4} name={"mdi:envelope"} />
+
+                <p>{SITE.email}</p>
+              </a>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="h-8 grid place-items-center w-8 border border-gray-600"
+              >
+                <Icon name={"mdi:facebook"} />
+              </div>
+              <div
+                class="h-8 grid place-items-center w-8 border border-gray-600"
+              >
+                <Icon name={"mdi:twitter"} />
+              </div>
+              <div
+                class="h-8 grid place-items-center w-8 border border-gray-600"
+              >
+                <Icon name={"mdi:youtube"} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>
+
+<style>
+  form {
+    @apply px-6 py-8 grid gap-8;
+  }
+  .formControl {
+    @apply flex w-full flex-col gap-2;
+  }
+
+  .formControl label {
+    @apply font-medium text-sm tracking-wide;
+  }
+
+  .formControl input {
+    @apply px-4 py-2 w-full rounded-xl border-gray-400;
+  }
+</style>

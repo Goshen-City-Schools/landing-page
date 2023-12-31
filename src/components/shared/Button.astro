@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { iconName, text, color } = Astro.props;
+const { iconName, text, color, classes } = Astro.props;
 ---
 
 <button
@@ -9,7 +9,7 @@ const { iconName, text, color } = Astro.props;
     color === "blue"
       ? "bg-blue-950 hover:border-blue-950"
       : "bg-purple-700  hover:border-purple-700"
-  } w-max rounded-[48px] transition duration-200 border-2 border-transparent px-6 py-3 text-white hover:bg-transparent  hover:text-gray-700`}
+  } w-max rounded-[48px] transition duration-200 border-2 border-transparent px-6 py-3 text-white hover:bg-transparent  hover:text-gray-700 ${classes}`}
 >
   {text}<Icon name={`mdi:${iconName}`} />
 </button>
