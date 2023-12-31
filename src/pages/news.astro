@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 import NewsCard from "../components/cards/News.card.astro";
 import { Image } from "astro:assets";
+import AboutSection from "../components/shared/AboutSection.astro";
 ---
 
 <Layout activeNav="news">
@@ -111,14 +112,10 @@ import { Image } from "astro:assets";
       </section>
       <section class="mb-24 px-6 py-8 sm:px-0">
         <div class="mb-12 flex justify-between items-end">
-          <div class="">
-            <p
-              class="text-purple-700 font-bold tracking-wide mb-4 text-lg uppercase"
-            >
-              More News
-            </p>
-            <h3 class="text-2xl font-bold">Explore More News and Updates</h3>
-          </div>
+          <AboutSection
+            title="More News"
+            subtitle="Explore More News and Updates"
+          />
 
           <a
             href="/news"

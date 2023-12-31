@@ -10,6 +10,7 @@ import Navigator from "../components/shared/Navigator.astro";
 import Indicator from "../components/shared/Indicator.astro";
 import GalleryCard from "../components/cards/GalleryCard.astro";
 import Button from "../components/shared/Button.astro";
+import AboutSection from "../components/shared/AboutSection.astro";
 ---
 
 <Layout activeNav="/">
@@ -99,9 +100,7 @@ import Button from "../components/shared/Button.astro";
     <!-- About Us -->
 
     <section class="bg-gray-100 mt-16 sm:mt-20 mb-12 sm:mb-24 sm:py-24 py-12">
-      <div class="container mb-12 pt-8 px-6 sm:px-0">
-        <p class="text-purple-700 font-bold tracking-wide mb-5">ABOUT US</p>
-      </div>
+      <AboutSection title="ABOUT US" classes="container mb-12  px-6 sm:px-0" />
 
       <div class="illustation-image__about sm:h-[52vh] h-[320px] mb-16"></div>
 
@@ -142,12 +141,11 @@ import Button from "../components/shared/Button.astro";
     <!-- Why Choose Us -->
 
     <section class="sm:py-24 py-12 px-6 sm:px-0">
-      <div class="container mb-4">
-        <p class="text-purple-700 font-bold tracking-wide mb-5">
-          WHY CHOOSE US
-        </p>
-        <h3 class="text-lg font-bold">Here's What make us Unique!</h3>
-      </div>
+      <AboutSection
+        classes="container mb-4"
+        title={"Why choose us"}
+        subtitle="Here's What make us Unique!"
+      />
 
       <div class="container sm:px-0 space-y-6">
         <FlippableGridView />
@@ -163,10 +161,10 @@ import Button from "../components/shared/Button.astro";
       class="relative grid items-center overflow-hidden mb-12 sm:mb-24 sm:py-24 py-12 bg-gray-50"
     >
       <div class="container flex justify-between items-end px-6 sm:px-0">
-        <div class="">
-          <p class="text-purple-700 font-bold tracking-wide mb-5">GALLERY</p>
-          <h3 class="text-lg font-bold">Take a Virtual Tour of our School</h3>
-        </div>
+        <AboutSection
+          title="GALLERY"
+          subtitle="Take a Virtual Tour of our School"
+        />
         <!-- Gallery arrow Navigation -->
         <div class="arrows flex gap-3">
           <Navigator direction="left" isActive="true" />
@@ -219,12 +217,11 @@ import Button from "../components/shared/Button.astro";
     <!-- Founders / Director Speech -->
 
     <section class="mb-12 sm:mb-24 sm:py-24 py-12 px-6 sm:px-0">
-      <div class="container mb-12">
-        <p class="text-purple-700 font-bold tracking-wide mb-5">
-          FOUNDER/DIRECTORS
-        </p>
-        <h3 class="text-lg font-bold">Meet Our Director</h3>
-      </div>
+      <AboutSection
+        title="FOUNDER/DIRECTORS"
+        subtitle="Meet Our Director"
+        classes="container mb-12"
+      />
 
       <div
         class="container flex flex-col sm:flex-row gap-4 items-center sm:gap-8"
@@ -278,13 +275,11 @@ import Button from "../components/shared/Button.astro";
     <!-- Testimonials -->
 
     <section class="bg-purple-100 sm:py-24 py-12 px-6 sm:px-0">
-      <div class="container mb-12 flex justify-between items-end">
-        <div class="">
-          <p class="text-purple-700 font-bold tracking-wide mb-5">
-            TESTIMONIES
-          </p>
-          <h3 class="text-lg font-bold">What Parents Say about Us</h3>
-        </div>
+      <div class="container mb-16 flex justify-between items-end">
+        <AboutSection
+          title="TESTIMONIES"
+          subtitle="What Parents Say about Us"
+        />
 
         <!-- Testimonies Navigation arrows -->
         <div class="arrows flex gap-3">
@@ -312,12 +307,10 @@ import Button from "../components/shared/Button.astro";
 
   <section class="mb-24 px-6 py-8 sm:px-0">
     <div class="container mb-12 flex justify-between items-end">
-      <div class="">
-        <p class="text-purple-700 font-bold tracking-wide mb-5">
-          NEWS AND UPDATES
-        </p>
-        <h3 class="text-lg font-bold">Check out our latest News and Updates</h3>
-      </div>
+      <AboutSection
+        title="NEWS AND UPDATES"
+        subtitle="Check out our latest News and Updates"
+      />
 
       <a
         href="/news"
