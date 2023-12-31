@@ -1,11 +1,36 @@
 ---
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
+import NewsCard from "../components/cards/News.card.astro";
 ---
 
 <Layout activeNav="news">
   <main>
     <div class="container">
-      <h1>News</h1>
+      <!-- News and Updates -->
+      <section class="mb-24 px-6 py-8 sm:px-0"><h1>News</h1></section>
+      <section class="mb-24 px-6 py-8 sm:px-0">
+        <div class="mb-12 flex justify-between items-end">
+          <div class="">
+            <p class="text-purple-700 font-bold tracking-wide mb-5">
+              More News
+            </p>
+            <h3 class="text-lg font-bold">Explore More News and Updates</h3>
+          </div>
+
+          <a
+            href="/news"
+            class="text-purple-700 font-bold flex gap-2 text-[18px] items-center"
+            >See all <Icon name={"mdi:arrow-right"} /></a
+          >
+        </div>
+
+        <div class="grid sm:grid-cols-3 sm:gap-x-8 gap-y-10">
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+        </div>
+      </section>
     </div>
   </main>
 </Layout>
