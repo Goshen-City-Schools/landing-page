@@ -45,7 +45,7 @@ const title =
           )
         }
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap">
           <div class="flex items-center gap-3">
             <p class="font-bold flex items-center gap-2 text-gray-500">
               <Icon color="black" name={"mdi:person"} />
@@ -66,13 +66,15 @@ const title =
           </div>
         </div>
 
-        <div class="bg-blue-50 py-12 pb-24 sm:rounded-3xl rounded-2xl">
+        <div class="bg-blue-50 py-4 sm:py-12 pb-24 sm:rounded-3xl rounded-2xl">
           <div
             class="flex flex-col prose max-w-none mt-1 px-4 sm:px-12 pb-12 first-letter:font-bold first-letter:text-3xl"
           >
             {
               content.map((paragraph) => (
-                <p class="text-gray-700 leading-10 text-lg  ">{paragraph}</p>
+                <p class="!mb-0 text-gray-700 leading-8 sm:leading-10 sm:text-lg text-base">
+                  {paragraph}
+                </p>
               ))
             }
           </div>
@@ -82,7 +84,9 @@ const title =
           <div class="flex items-center gap-6 justify-center flex-col">
             <h3 class="font-bold text-2xl underline">Keywords</h3>
 
-            <div class="tags flex items-center gap-3">
+            <div
+              class="tags flex-wrap px-4 text-center justify-center flex items-center gap-3"
+            >
               {
                 keywords.map((keyword) => (
                   <p class="tag bg-red-50">{keyword}</p>

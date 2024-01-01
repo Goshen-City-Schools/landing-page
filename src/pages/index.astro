@@ -25,9 +25,9 @@ import CTASection from "../components/sections/CTASection.astro";
         <div class="bgI sm:hidden absolute"></div>
         <!-- Write-up -->
         <div
-          class="sm:col-span-4 sm:text-gray-700 grid sm:gap-8 prose items-start"
+          class="sm:col-span-4 sm:text-gray-700 grid sm:gap-8 prose-lg sm:prose items-start"
         >
-          <h1 class="sm:text-6xl text-white sm:text-gray-900">
+          <h1 class="sm:text-6xl !mb-2 sm:mb-auto text-white sm:text-gray-900">
             Empowering Every Child's Potential
           </h1>
 
@@ -255,7 +255,9 @@ import CTASection from "../components/sections/CTASection.astro";
           </h2>
           <p class="font-bold !text-xl !mb-0 mt-2">Proverbs 22:6</p>
 
-          <p class="text-gray-700 line-clamp-7 prose !mb-0 max-w-none">
+          <p
+            class="text-gray-700 sm:line-clamp-7 line-clamp-5 prose !mb-0 max-w-none"
+          >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
             voluptates tempore fugiat autem quisquam tenetur explicabo
             laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
@@ -273,7 +275,9 @@ import CTASection from "../components/sections/CTASection.astro";
           </a>
 
           <div class="flex flex-col">
-            <h2 class="font-bold">OKAKE, IFEOMA CHINWE</h2>
+            <h2 class="font-bold !text-xl sm:text-inherit">
+              OKAKE, IFEOMA CHINWE
+            </h2>
             <small>Director/Founder</small>
           </div>
         </div>
@@ -317,7 +321,7 @@ import CTASection from "../components/sections/CTASection.astro";
     <div class="container mb-12 flex justify-between items-end">
       <AboutSection
         title="NEWS AND UPDATES"
-        subtitle="Check out our latest News and Updates"
+        subtitle="Check out our latest Updates"
       />
 
       <a
