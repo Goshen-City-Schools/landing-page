@@ -21,10 +21,11 @@ export default defineConfig({
     include: {
       mdi: ["*"] // (Default) Loads entire Material Design Icon set
     }
-  }), react(), sitemap(), mdx()]
+  }), react(), sitemap(), mdx({ optimize: true,})]
   // react(),
   // sitemap(),
   ,
+  
 
   markdown: {
     // remarkPlugins: [

@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import NewsCard from "../../components/cards/News.card.astro";
 import AboutSection from "../../components/shared/AboutSection.astro";
 
-interface Frontmatter {
+export interface Frontmatter {
   title: string;
   keywords: string[];
   featuredImage: string;
@@ -40,7 +40,13 @@ const posts = await Astro.glob<Frontmatter>("./*.mdx");
           {
             posts.map(
               (post) =>
-                post && <NewsCard url={post.url} post={post?.frontmatter} />
+                post && (
+                  <NewsCard
+                    url={post.url}
+                    post={post?.frontmatter}
+                    Excerpt={post?.Content[0]}
+                  />
+                )
             )
           }
         </div>

@@ -2,6 +2,19 @@
 import { Icon } from "astro-icon/components";
 import AboutSection from "../../components/shared/AboutSection.astro";
 import NewsCard from "../../components/cards/News.card.astro";
+
+export interface Frontmatter {
+  title: string;
+  keywords: string[];
+  featuredImage: string;
+  readingTime: string;
+  pubDate: Date;
+  author: string;
+  slug: string;
+  excerpt: string;
+  url: string;
+}
+const posts = await Astro.glob<Frontmatter>("../../pages/news/*.mdx");
 ---
 
 <section class="mb-24 px-6 py-8 sm:py-24 sm:px-0">
@@ -19,8 +32,10 @@ import NewsCard from "../../components/cards/News.card.astro";
   </div>
 
   <div class="container grid sm:grid-cols-3 sm:gap-x-8 gap-y-10">
-    <NewsCard />
-    <NewsCard />
-    <NewsCard />
+    {
+      posts.map(
+        (post) => post && <NewsCard url={post?.url} post={post?.frontmatter} />
+      )
+    }
   </div>
 </section>

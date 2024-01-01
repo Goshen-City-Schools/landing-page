@@ -13,11 +13,12 @@ interface Frontmatter {
   excerpt: string;
 }
 
-const { post, url } = Astro.props;
+const { post, url, Excerpt } = Astro.props;
 
 export interface Props {
   post: Frontmatter;
-  url: string;
+  url?: string;
+  Excerpt?: string;
 }
 ---
 
@@ -49,7 +50,7 @@ export interface Props {
             {post?.title}
           </h2>
 
-          <p class="line-clamp-4 leading-7">{post?.excerpt}</p>
+          <p class="line-clamp-2 leading-7">{post?.excerpt}</p>
 
           <a
             href={url}
