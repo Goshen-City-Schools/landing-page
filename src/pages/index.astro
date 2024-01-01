@@ -18,15 +18,20 @@ import CTASection from "../components/sections/CTASection.astro";
   <main class="">
     <!-- Hero  -->
 
-    <section class="hero grid w-full h-[70vh] py-4">
+    <section class="hero relative grid w-full h-[70vh] sm:py-4">
       <div
-        class="container gap-8 px-4 items-center grid grid-cols-7 h-full overflow-hidden"
+        class="container gap-8 px-8 sm:px-4 items-center grid sm:grid-cols-7 h-full overflow-hidden"
       >
+        <div class="bgI sm:hidden absolute"></div>
         <!-- Write-up -->
-        <div class="col-span-4 grid gap-8 prose">
-          <h1 class="sm:text-6xl">Empowering Every Child's Potential</h1>
+        <div
+          class="sm:col-span-4 sm:text-gray-700 grid sm:gap-8 prose items-start"
+        >
+          <h1 class="sm:text-6xl text-white sm:text-gray-900">
+            Empowering Every Child's Potential
+          </h1>
 
-          <p class="text-gray-900">
+          <p class="text-white sm:text-gray-900">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
             nihil velit praesentium porro repudiandae in nesciunt adipisci.
             Atque eos accusamus suscipit distinctio, consectetur illum
@@ -37,7 +42,9 @@ import CTASection from "../components/sections/CTASection.astro";
         </div>
 
         <!-- Illustration -->
-        <div class="col-start-5 col-end-8 relative h-full w-full">
+        <div
+          class="sm:col-start-5 hidden sm:grid sm:col-end-8 relative h-full w-full"
+        >
           <Image
             height={600}
             width={600}
@@ -341,5 +348,15 @@ import CTASection from "../components/sections/CTASection.astro";
   }
   .prose {
     max-width: none;
+  }
+
+  .bgI {
+    background-image: url("https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703928891/banners/q8e1017bw0v3owa8gwh7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #090808bc;
+    background-blend-mode: overlay;
+    @apply h-full w-full left-0 top-0 -z-40;
   }
 </style>

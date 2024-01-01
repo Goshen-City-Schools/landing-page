@@ -4,6 +4,8 @@ import "../../styles/base.css";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollToTop from "../components/shared/ScrollToTop.astro";
+import ChatButton from "../components/shared/ChatButton.astro";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 export interface Props {
@@ -113,6 +115,9 @@ const { activeNav } = Astro.props;
     <Header activeNav={activeNav} />
     <slot />
 
+    <ScrollToTop />
+
+    <ChatButton />
     <Footer />
   </body>
 </html>
