@@ -8,8 +8,9 @@ import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import react from "@astrojs/react";
 import vercel from "@astrojs/vercel/serverless";
-
 import sitemap from "@astrojs/sitemap";
+
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,7 +21,7 @@ export default defineConfig({
     include: {
       mdi: ["*"] // (Default) Loads entire Material Design Icon set
     }
-  }), react(), sitemap()]
+  }), react(), sitemap(), mdx()]
   // react(),
   // sitemap(),
   ,

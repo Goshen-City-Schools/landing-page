@@ -1,45 +1,64 @@
 ---
 import { Image } from "astro:assets";
 import { AnimatePresence } from "framer-motion";
+
+interface Frontmatter {
+  title: string;
+  keywords: string[];
+  featuredImage: string;
+  readingTime: string;
+  pubDate: Date;
+  author: string;
+  slug: string;
+  excerpt: string;
+}
+
+const { post, url } = Astro.props;
+
+export interface Props {
+  post: Frontmatter;
+  url: string;
+}
 ---
 
 <AnimatePresence>
-  <div
-    class="newsCard w-full sm:max-w-sm rounded-3xl hover:cursor-pointer border border-transparent hover:scale-105 transition duration-200"
-  >
-    <div class="imgContainer bg-slate-50 h-[280px] rounded-3xl">
-      <Image
-        src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
-        height={320}
-        width={320}
-        class={"img object-cover"}
-        alt={"Goshen news"}
-        loading={"lazy"}
-      />
-    </div>
-    <div
-      class="flex justify-between py-2 mb-2 opacity-95 font-bold text-gray-700"
-    >
-      <p class="text-sm">3 hours ago</p>
-      <p class="text-sm">4 mins read</p>
-    </div>
+  {
+    post?.title && (
+      <div class="newsCard w-full sm:max-w-sm rounded-3xl hover:cursor-pointer border border-transparent hover:scale-105 transition duration-200">
+        <div class="imgContainer bg-slate-50 h-[280px] rounded-3xl">
+          <Image
+            src={
+              post?.featuredImage
+                ? post?.featuredImage
+                : "https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg" // Be replaced with placeholder image
+            }
+            height={320}
+            width={320}
+            class={"img object-cover"}
+            alt={"Goshen news"}
+            loading={"lazy"}
+          />
+        </div>
 
-    <div class="flex flex-col gap-2">
-      <h2 class="font-semibold leading-7 text-2xl line-clamp-2">
-        Goshen News Title Long enough to another
-      </h2>
+        <div class="flex justify-between py-2 mb-2 opacity-95 font-bold text-gray-700">
+          <p class="text-sm">{post?.pubDate}</p>
+          <p class="text-sm">{post?.readingTime}</p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="font-semibold leading-7 text-2xl line-clamp-2">
+            {post?.title}
+          </h2>
 
-      <p class="line-clamp-4 leading-7">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
-        aperiam, accusamus eligendi ea impedit aliquid reprehenderit a
-        perferendis? Dolor, distinctio consequatur nostrum sequi corrupti iure.
-      </p>
+          <p class="line-clamp-4 leading-7">{post?.excerpt}</p>
 
-      <a
-        href="/news/1"
-        class="font-bold text-lg mt-3 prose mb-2 flex text-purple-500 underline-offset-8 underline"
-        >Read More
-      </a>
-    </div>
-  </div>
+          <a
+            href={url}
+            class="font-bold text-lg mt-3 prose mb-2 flex text-purple-500 underline-offset-8 underline"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    )
+  }
 </AnimatePresence>

@@ -1,10 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import NewsCard from "../components/cards/News.card.astro";
-import AboutSection from "../components/shared/AboutSection.astro";
+import Layout from "../../layouts/Layout.astro";
+import NewsCard from "../../components/cards/News.card.astro";
+import AboutSection from "../../components/shared/AboutSection.astro";
+
+interface Frontmatter {
+  title: string;
+  keywords: string[];
+  featuredImage: string;
+  readingTime: string;
+  pubDate: Date;
+  author: string;
+  slug: string;
+  excerpt: string;
+  url: string;
+}
+const posts = await Astro.glob<Frontmatter>("./*.mdx");
 ---
 
-<!-- TODO: Use date library to get days/time ago today from day posted -->
+<!-- TODO: Use date library to get days/time ago today from day posted -->{}
 <Layout activeNav="news">
   <main>
     <div class="container">
@@ -24,19 +37,12 @@ import AboutSection from "../components/shared/AboutSection.astro";
         </div>
 
         <div class="grid sm:grid-cols-3 sm:gap-x-8 gap-y-10">
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
+          {
+            posts.map(
+              (post) =>
+                post && <NewsCard url={post.url} post={post?.frontmatter} />
+            )
+          }
         </div>
       </section>
     </div>
@@ -62,3 +68,9 @@ import AboutSection from "../components/shared/AboutSection.astro";
     @apply border px-3 py-2 rounded-xl text-sm border-blue-700;
   }
 </style>
+
+<script>
+  const posts = await Astro.glob("../contents/*.mdx");
+
+  console.log(posts);
+</script>

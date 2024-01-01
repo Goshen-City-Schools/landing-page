@@ -1,0 +1,114 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import NewsSection from "../components/sections/NewsSection.astro";
+
+const {
+  frontmatter: { title, featuredImage, keywords, readingTime, pubDate, author },
+} = Astro.props;
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    keywords: string[];
+    featuredImage: string;
+    readingTime: string;
+    pubDate: Date;
+    author: string;
+  };
+}
+---
+
+<!-- TODO: Use date library to get days/time ago today from day posted -->
+<Layout activeNav="news">
+  <main>
+    <div class="container">
+      <!-- News and Updates -->
+      <section class="mb-24 px-6 py-8 sm:px-0">
+        <div class="max-w-none prose">
+          <h1 class="font-[600] mb-12 uppercase text-gray-600">
+            {title}
+          </h1>
+        </div>
+        {
+       
+            <div class="featured-image sm:h-[76vh] h-[320px] relative sm:rounded-3xl rounded-2xl overflow-hidden">
+              <Image
+                loading={"lazy"}
+                height={400}
+                width={1200}
+                alt={"News descrition"}
+                class={"absolute h-full w-full object-cover"}
+                src={ featuredImage
+                ? featuredImage
+                : "https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+              />
+            </div>
+            
+
+        <div class="flex justify-between flex-wrap">
+          <div class="flex items-center gap-3">
+            <p class="font-bold flex items-center gap-2 text-gray-500">
+              <Icon color="black" name={"mdi:person"} />
+              {author}
+            </p>
+          </div>
+
+          <!--  -->
+          <div class="flex py-6 font-bold gap-8 text-gray-500">
+            <p class="flex items-center gap-2">
+              <Icon color={"black"} name={"mdi:clock"} />
+              {pubDate}
+            </p>
+            <p class="flex items-center gap-2">
+              <Icon color={"black"} name={"mdi:document"} />
+              {readingTime} read
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 py-4 sm:py-12 pb-24 sm:rounded-3xl rounded-2xl">
+          <div
+            class="flex flex-col prose max-w-none mt-1 px-4 sm:px-12 pb-12 first-letter:font-bold first-letter:text-3xl mb-0 prose-p:text-gray-700 sm:prose-lg leading-8 sm:leading-10"
+          >
+            <slot />
+          </div>
+
+          <!-- Related Tags -->
+
+          <div class="flex items-center gap-6 justify-center flex-col">
+            <h3 class="font-bold text-2xl underline">Keywords</h3>
+
+            <div
+              class="tags flex-wrap px-4 text-center justify-center flex items-center gap-3"
+            >
+              {
+                keywords.map((keyword) => (
+                  <p class="tag bg-red-50">{keyword}</p>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  -->
+      <NewsSection />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .tag {
+    @apply text-sm tracking-wide grid place-items-center px-4 shadow-sm py-1 border font-semibold text-blue-900 border-blue-950 rounded-3xl cursor-pointer;
+  }
+
+  .tag:nth-child(2n) {
+    @apply bg-green-50;
+  }
+
+  .tag:nth-child(3n) {
+    @apply bg-purple-50;
+  }
+</style>
