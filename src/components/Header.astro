@@ -47,36 +47,37 @@ const { activeNav } = Astro.props;
 
   <!-- Bottom Header Navigation -->
   <div
-    class="container sticky top-0 z-50 px-4 py-2 flex justify-between sm:items-center"
+    class="container relative top-0 z-50 px-4 py-2 justify-between sm:items-center"
   >
-    <Logo />
-    <nav class="flex sm:justify-end justify-center items-end gap-4">
-      <!-- Hamburger -->
-      <button
-        class="hamburger-menu focus-outline"
-        aria-label="Open Menu"
-        aria-expanded="false"
-        aria-controls="menu-items"
+    <button
+      class="hamburger-menu focus-outline"
+      aria-label="Open Menu"
+      aria-expanded="false"
+      aria-controls="menu-items"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="menu-icon"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="menu-icon"
-        >
-          <line x1="7" y1="12" x2="21" y2="12" class="line"></line>
-          <line x1="3" y1="6" x2="21" y2="6" class="line"></line>
-          <line x1="12" y1="18" x2="21" y2="18" class="line"></line>
-          <line x1="18" y1="6" x2="6" y2="18" class="close"></line>
-          <line x1="6" y1="6" x2="18" y2="18" class="close"></line>
-        </svg>
-      </button>
+        <line x1="7" y1="12" x2="21" y2="12" class="line"></line>
+        <line x1="3" y1="6" x2="21" y2="6" class="line"></line>
+        <line x1="12" y1="18" x2="21" y2="18" class="line"></line>
+        <line x1="18" y1="6" x2="6" y2="18" class="close"></line>
+        <line x1="6" y1="6" x2="18" y2="18" class="close"></line>
+      </svg>
+    </button>
+
+    <Logo />
+    <nav class="flex sm:justify-end justify-center sm:items-end gap-4">
+      <!-- Hamburger -->
 
       <!-- Navigation Menu -->
       <ul id="menu-items" class="display-none sm:flex">
@@ -115,7 +116,7 @@ const { activeNav } = Astro.props;
   }
 
   .hamburger-menu {
-    @apply justify-center items-center sm:hidden;
+    @apply justify-center absolute right-4 top-8 items-center sm:hidden;
   }
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
