@@ -12,6 +12,7 @@ import GalleryCard from "../components/cards/GalleryCard.astro";
 import Button from "../components/shared/Button.astro";
 import AboutSection from "../components/shared/AboutSection.astro";
 import CTASection from "../components/sections/CTASection.astro";
+import NewsSection from "../components/sections/NewsSection.astro";
 ---
 
 <Layout activeNav="/">
@@ -317,26 +318,7 @@ import CTASection from "../components/sections/CTASection.astro";
 
   <!-- News and Updates -->
 
-  <section class="mb-24 px-6 py-8 sm:py-24 sm:px-0">
-    <div class="container mb-12 flex justify-between items-end">
-      <AboutSection
-        title="NEWS AND UPDATES"
-        subtitle="Check out our latest Updates"
-      />
-
-      <a
-        href="/news"
-        class="text-purple-700 font-bold flex gap-2 text-[18px] items-center"
-        >See all <Icon name={"mdi:arrow-right"} /></a
-      >
-    </div>
-
-    <div class="container grid sm:grid-cols-3 sm:gap-x-8 gap-y-10">
-      <NewsCard />
-      <NewsCard />
-      <NewsCard />
-    </div>
-  </section>
+  <NewsSection />
 
   <!-- CTA -->
 

@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+import AboutSection from "../../components/shared/AboutSection.astro";
+import NewsCard from "../../components/cards/News.card.astro";
+---
+
+<section class="mb-24 px-6 py-8 sm:py-24 sm:px-0">
+  <div class="container mb-12 flex justify-between items-end">
+    <AboutSection
+      title="NEWS AND UPDATES"
+      subtitle="Check out our latest Updates"
+    />
+
+    <a
+      href="/news"
+      class="text-purple-700 font-bold flex gap-2 text-[18px] items-center"
+      >See all <Icon name={"mdi:arrow-right"} /></a
+    >
+  </div>
+
+  <div class="container grid sm:grid-cols-3 sm:gap-x-8 gap-y-10">
+    <NewsCard />
+    <NewsCard />
+    <NewsCard />
+  </div>
+</section>

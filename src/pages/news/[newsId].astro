@@ -1,0 +1,117 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import NewsSection from "../../components/sections/NewsSection.astro";
+
+const title =
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio accusamus ipsum possimus ullam modi.",
+  content = [
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aperiam, accusamus eligendi ea impedit aliquid reprehenderit a perferendis? Dolor, distinctio consequatur nostrum sequi corrupti iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus praesentium provident aliquam nisi dolores unde itaque ad tenetur beatae eligendi, facilis accusamus quis repudiandae. Reprehenderit sit repellat vel deserunt adipisci, quasi nostrum amet porro ipsa alias quidem autem fugit repellendus placeat, vero numquam sed officiis debitis nam, incidunt beatae magnam? Sint amet modi ipsum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex non laudantium consectetur repellendus ad maxime, sint eos ipsam? Molestias repellendus dolore ea, vero cupiditate dicta eos sequi natus molestiae debitis non tempora dignissimos perspiciatis temporibus veniam atque distinctio hic fugiat vel odio voluptates. Blanditiis possimus odit corporis in vel praesentium magni asperiores repellat, molestias placeat nesciunt perspiciatis. Provident sit eum earum reiciendis excepturi illum nam pariatur quod aut ipsum magni alias hic suscipit velit perspiciatis totam nihil dolores quo praesentium, tempora sequi quam. Ab hic porro illo obcaecati ipsum cum asperiores voluptatum nulla amet, similique, maxime odio voluptas quas quae.",
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aperiam, accusamus eligendi ea impedit aliquid reprehenderit a perferendis? Dolor, distinctio consequatur nostrum sequi corrupti iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus praesentium provident aliquam nisi dolores unde itaque ad tenetur beatae eligendi, facilis accusamus quis repudiandae. Reprehenderit sit repellat vel deserunt adipisci, quasi nostrum amet porro ipsa alias quidem autem fugit repellendus placeat, vero numquam sed officiis debitis nam, incidunt beatae magnam? Sint amet modi ipsum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex non laudantium consectetur repellendus ad maxime, sint eos ipsam? Molestias repellendus dolore ea, vero cupiditate dicta eos sequi natus molestiae debitis non tempora dignissimos perspiciatis temporibus veniam atque distinctio hic fugiat vel odio voluptates. Blanditiis possimus odit corporis in vel praesentium magni asperiores repellat, molestias placeat nesciunt perspiciatis. Provident sit eum earum reiciendis excepturi illum nam pariatur quod aut ipsum magni alias hic suscipit velit perspiciatis totam nihil dolores quo praesentium, tempora sequi quam. Ab hic porro illo obcaecati ipsum cum asperiores voluptatum nulla amet, similique, maxime odio voluptas quas quae.",
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aperiam, accusamus eligendi ea impedit aliquid reprehenderit a perferendis? Dolor, distinctio consequatur nostrum sequi corrupti iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus praesentium provident aliquam nisi dolores unde itaque ad tenetur beatae eligendi, facilis accusamus quis repudiandae. Reprehenderit sit repellat vel deserunt adipisci, quasi nostrum amet porro ipsa alias quidem autem fugit repellendus placeat, vero numquam sed officiis debitis nam, incidunt beatae magnam? Sint amet modi ipsum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex non laudantium consectetur repellendus ad maxime, sint eos ipsam? Molestias repellendus dolore ea, vero cupiditate dicta eos sequi natus molestiae debitis non tempora dignissimos perspiciatis temporibus veniam atque distinctio hic fugiat vel odio voluptates. Blanditiis possimus odit corporis in vel praesentium magni asperiores repellat, molestias placeat nesciunt perspiciatis. Provident sit eum earum reiciendis excepturi illum nam pariatur quod aut ipsum magni alias hic suscipit velit perspiciatis totam nihil dolores quo praesentium, tempora sequi quam. Ab hic porro illo obcaecati ipsum cum asperiores voluptatum nulla amet, similique, maxime odio voluptas quas quae.",
+  ],
+  author = "Annonymous user",
+  keywords = ["Resumption", "News", "Admission", "School"],
+  readingTime = "4 mins",
+  date = "3 hours ago",
+  featuredImage = "";
+---
+
+<!-- TODO: Use date library to get days/time ago today from day posted -->
+<Layout activeNav="news">
+  <main>
+    <div class="container">
+      <!-- News and Updates -->
+      <section class="mb-24 px-6 py-8 sm:px-0">
+        <div class="max-w-none prose">
+          <h1 class="font-[600] mb-12 underline text-gray-600">
+            {title}
+          </h1>
+        </div>
+        {
+          featuredImage && (
+            <div class="featured-image sm:h-[76vh] h-[320px] relative sm:rounded-3xl rounded-2xl overflow-hidden">
+              <Image
+                loading={"lazy"}
+                height={400}
+                width={1200}
+                alt={"News descrition"}
+                class={"absolute h-full w-full object-cover"}
+                src={featuredImage}
+              />
+            </div>
+          )
+        }
+
+        <div class="flex justify-between flex-wrap">
+          <div class="flex items-center gap-3">
+            <p class="font-bold flex items-center gap-2 text-gray-500">
+              <Icon color="black" name={"mdi:person"} />
+              {author}
+            </p>
+          </div>
+
+          <!--  -->
+          <div class="flex py-6 font-bold gap-8 text-gray-500">
+            <p class="flex items-center gap-2">
+              <Icon color={"black"} name={"mdi:clock"} />
+              {date}
+            </p>
+            <p class="flex items-center gap-2">
+              <Icon color={"black"} name={"mdi:document"} />
+              {readingTime} read
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 py-4 sm:py-12 pb-24 sm:rounded-3xl rounded-2xl">
+          <div
+            class="flex flex-col prose max-w-none mt-1 px-4 sm:px-12 pb-12 first-letter:font-bold first-letter:text-3xl"
+          >
+            {
+              content.map((paragraph) => (
+                <p class="!mb-0 text-gray-700 leading-8 sm:leading-10 sm:text-lg text-base">
+                  {paragraph}
+                </p>
+              ))
+            }
+          </div>
+
+          <!-- Related Tags -->
+
+          <div class="flex items-center gap-6 justify-center flex-col">
+            <h3 class="font-bold text-2xl underline">Keywords</h3>
+
+            <div
+              class="tags flex-wrap px-4 text-center justify-center flex items-center gap-3"
+            >
+              {
+                keywords.map((keyword) => (
+                  <p class="tag bg-red-50">{keyword}</p>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  -->
+      <NewsSection />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .tag {
+    @apply text-sm tracking-wide grid place-items-center px-4 shadow-sm py-1 border font-semibold text-blue-900 border-blue-950 rounded-3xl cursor-pointer;
+  }
+
+  .tag:nth-child(2n) {
+    @apply bg-green-50;
+  }
+
+  .tag:nth-child(3n) {
+    @apply bg-purple-50;
+  }
+</style>
