@@ -14,21 +14,33 @@ import Logo from "./shared/Logo.astro";
 
         <!-- School Location -->
         <a href={SITE.location.link} class="flex gap-4">
-          <Icon size={12} height={16} name={"mdi:location"} />
+          <Icon
+            class={"text-orange-100"}
+            size={28}
+            name={"mdi:location-outline"}
+          />
 
           <p>{SITE.location.address}</p>
         </a>
 
         <!-- School Phone Number -->
         <a href=`mailto:${SITE.email}` class="flex gap-4">
-          <Icon size={4} height={4} name={"mdi:phone"} />
+          <Icon
+            class={"text-orange-100"}
+            size={24}
+            name={"mdi:phone-outline"}
+          />
 
           <p>08036960509</p>
         </a>
 
         <!-- School Email -->
         <a href=`mailto:${SITE.email}` class="flex gap-4">
-          <Icon size={4} height={4} name={"mdi:envelope"} />
+          <Icon
+            class={"text-orange-100"}
+            size={24}
+            name={"mdi:envelope-outline"}
+          />
 
           <p>{SITE.email}</p>
         </a>
@@ -58,10 +70,10 @@ import Logo from "./shared/Logo.astro";
 
         <nav class="flex sm:flex-col items-center sm:items-start gap-4">
           <a href="" class="text-[24px]">
-            <Icon class={"text-[24px]"} name={"mdi:facebook"} />
+            <Icon class={"text-3xl"} name={"mdi:facebook"} />
           </a>
-          <a href=""> <Icon name={"mdi:twitter"} /></a>
-          <a href=""> <Icon name={"mdi:linkedin"} /></a>
+          <a href=""> <Icon class={"text-3xl"} name={"mdi:twitter"} /></a>
+          <a href=""> <Icon class={"text-3xl"} name={"mdi:linkedin"} /></a>
         </nav>
       </div>
     </div>
@@ -81,5 +93,9 @@ import Logo from "./shared/Logo.astro";
       rgba(39, 28, 128, 1) 100%
     );
     color: white;
+  }
+
+  footer nav a {
+    @apply hover:text-orange-400 transition;
   }
 </style>

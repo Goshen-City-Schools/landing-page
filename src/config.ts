@@ -2,18 +2,20 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
   website: "https://goshencityschools.com/", // replace this with your deployed domain
-  author: "Sat Naing",
+  author: "Goshen Group of Schools.",
   desc: "Goshen City and Stars Group of Schools is strategically balanced with the Nation's educational system.",
   title: "Goshen City and Stars Group of Schools",
-  ogImage: "https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703919606/banners/uqwfgzcicuvh834keynk.jpg",
+  ogImage:
+    "https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703919606/banners/uqwfgzcicuvh834keynk.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
   location: {
-    address: "Plot 11 - 14, Living Avenue, Opp. Police Detectives College, Enugu.",
-    link:"/"
+    address:
+      "Plot 11 - 14, Living Avenue, Opp. Police Detectives College, Enugu.",
+    link: "/",
+    // TODO: Link address to map
   },
-  email: "goshencitychannel@gmail.com"
-
+  email: "goshencitychannels@gmail.com",
 };
 
 export const LOCALE = {
@@ -29,12 +31,6 @@ export const LOGO_IMAGE = {
 };
 
 export const SOCIALS: SocialObjects = [
-  {
-    name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
-  },
   {
     name: "Facebook",
     href: "https://github.com/satnaing/astro-paper",
@@ -66,12 +62,6 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
   {
-    name: "Twitch",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Twitch`,
-    active: false,
-  },
-  {
     name: "YouTube",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on YouTube`,
@@ -84,69 +74,9 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
   {
-    name: "Snapchat",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Snapchat`,
-    active: false,
-  },
-  {
-    name: "Pinterest",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Pinterest`,
-    active: false,
-  },
-  {
-    name: "TikTok",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on TikTok`,
-    active: false,
-  },
-  {
-    name: "CodePen",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on CodePen`,
-    active: false,
-  },
-  {
-    name: "Discord",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Discord`,
-    active: false,
-  },
-  {
-    name: "GitLab",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on GitLab`,
-    active: false,
-  },
-  {
-    name: "Reddit",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Reddit`,
-    active: false,
-  },
-  {
-    name: "Skype",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Skype`,
-    active: false,
-  },
-  {
-    name: "Steam",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Steam`,
-    active: false,
-  },
-  {
     name: "Telegram",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on Telegram`,
-    active: false,
-  },
-  {
-    name: "Mastodon",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Mastodon`,
     active: false,
   },
 ];

@@ -74,41 +74,41 @@ import { SITE } from "../config";
             >
               <!-- School Location -->
               <a href={SITE.location.link} class="flex gap-3">
-                <Icon size={12} height={16} name={"mdi:location"} />
+                <Icon size={20} name={"mdi:location"} />
 
                 <p>{SITE.location.address}</p>
               </a>
 
               <!-- School Phone Number -->
               <a href=`mailto:${SITE.email}` class="flex gap-3">
-                <Icon size={4} height={4} name={"mdi:phone"} />
+                <Icon size={20} name={"mdi:phone-outline"} />
 
                 <p>08036960509</p>
               </a>
 
               <!-- School Email -->
               <a href=`mailto:${SITE.email}` class="flex gap-3">
-                <Icon size={4} height={4} name={"mdi:envelope"} />
+                <Icon size={20} name={"mdi:envelope-outline"} />
 
                 <p>{SITE.email}</p>
               </a>
             </div>
 
-            <div class="flex gap-4">
+            <div class="flex gap-4 items-center">
               <div
-                class="h-8 grid place-items-center w-8 border border-gray-600"
+                class="h-8 grid place-items-center w-8 border border-blue-500 rounded-lg"
               >
-                <Icon name={"mdi:facebook"} />
+                <Icon size={24} class={"text-blue-500"} name={"mdi:facebook"} />
               </div>
               <div
-                class="h-8 grid place-items-center w-8 border border-gray-600"
+                class="h-8 grid place-items-center w-8 border border-blue-950 rounded-lg"
               >
-                <Icon name={"mdi:twitter"} />
+                <Icon size={24} class={"text-blue-950"} name={"mdi:twitter"} />
               </div>
               <div
-                class="h-8 grid place-items-center w-8 border border-gray-600"
+                class="h-8 grid place-items-center w-8 border border-red-500 rounded-lg"
               >
-                <Icon name={"mdi:youtube"} />
+                <Icon size={24} class={"text-red-500"} name={"mdi:youtube"} />
               </div>
             </div>
           </div>
