@@ -11,7 +11,9 @@ const { isReverse, imgSrc, title, content } = Astro.props;
   }`}
 >
   <div
-    class="w-full sm:w-[45%] h-[300px] sm:h-[280px] rounded-3xl overflow-hidden flex-shrink-0 relative"
+    class=`w-full reveal ${
+      isReverse ? "fade-right" : "fade-left"
+    }  sm:w-[45%] h-[300px] sm:h-[280px] rounded-3xl overflow-hidden flex-shrink-0 relative`
   >
     <Image
       src={imgSrc
@@ -25,7 +27,9 @@ const { isReverse, imgSrc, title, content } = Astro.props;
     />
   </div>
   <div
-    class="sm:prose-lg max-w-none prose prose-p:leading-8 absolute sm:relative bottom-0 bg-[#000000c2] sm:bg-white sm:bg-opacity-0 rounded-3xl p-8"
+    class=`sm:prose-lg reveal ${
+      isReverse ? "fade-left" : "fade-right"
+    } max-w-none prose prose-p:leading-8 absolute sm:relative bottom-0 bg-[#000000c2] sm:bg-white sm:bg-opacity-0 rounded-3xl p-8`
   >
     <h2 class="!mb-2 text-gray-100 sm:text-gray-900">
       {title ? title : "This section title"}

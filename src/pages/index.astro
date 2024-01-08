@@ -17,7 +17,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
   <main class="">
     <!-- Hero  -->
 
-    <section class="hero relative grid w-full h-[70vh] sm:py-4">
+    <section class="reveal hero relative grid w-full h-[70vh] sm:py-4">
       <div
         class="container gap-8 px-8 sm:px-4 items-center grid sm:grid-cols-7 h-full overflow-hidden"
       >
@@ -63,7 +63,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
           class="grid grid-cols-2 sm:grid-cols-4 sm:space-x-4 space-y-8 sm:space-y-0 sm:divide-x-2"
         >
           <div
-            class="flex flex-col px-2 sm:px-3 prose w-full justify-center items-center text-center gap-2"
+            class="flex flex-col px-2 sm:px-3 prose w-full reveal fade-bottom justify-center items-center text-center gap-2"
           >
             <h3 class="not-italic text-white text-2xl">Creche</h3>
             <p>
@@ -73,7 +73,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
           </div>
 
           <div
-            class="flex flex-col px-2 sm:px-3 prose w-full justify-center items-center text-center gap-2"
+            class="flex flex-col px-2 sm:px-3 prose w-full reveal fade-bottom justify-center items-center text-center gap-2"
           >
             <h3 class="not-italic text-white text-2xl">Nursery</h3>
             <p>
@@ -83,7 +83,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
           </div>
 
           <div
-            class="flex flex-col px-2 sm:px-3 prose w-full justify-center items-center text-center gap-2"
+            class="flex flex-col px-2 sm:px-3 prose w-full reveal fade-bottom justify-center items-center text-center gap-2"
           >
             <h3 class="not-italic text-white text-2xl">Basic</h3>
             <p>
@@ -92,7 +92,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
             </p>
           </div>
           <div
-            class="flex flex-col px-2 sm:px-3 prose w-full justify-center items-center text-center gap-2"
+            class="flex flex-col px-2 sm:px-3 prose w-full reveal fade-bottom justify-center items-center text-center gap-2"
           >
             <h3 class="not-italic text-white text-2xl">Secondary</h3>
             <p>
@@ -107,13 +107,13 @@ import NewsSection from "../components/sections/NewsSection.astro";
     <!-- About Us -->
 
     <section class="bg-gray-100 mt-16 sm:mt-20 mb-12 sm:mb-24 sm:py-24 py-12">
-      <AboutSection title="ABOUT US" classes="container mb-12  px-6 sm:px-0" />
+      <AboutSection title="ABOUT US" classes="container mb-12  px-6 sm:px-0 " />
 
       <div class="illustation-image__about sm:h-[52vh] h-[320px] mb-16"></div>
 
       <div class="container flex flex-col gap-2 px-6 sm:px-0">
         <div
-          class="prose max-w-6xl prose-headings:mb-3 mb-12 text-gray-800 w-full"
+          class="prose max-w-6xl prose-headings:mb-3 mb-12 text-gray-800 w-full reveal fade-bottom"
         >
           <h2 class="!mb-10">Welcome to Goshen Group of Schools</h2>
 
@@ -143,7 +143,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
 
     <!-- Why Choose Us -->
 
-    <section class="sm:py-24 py-12 px-6 sm:px-0">
+    <section class="reveal sm:py-24 py-12 px-6 sm:px-0">
       <AboutSection
         classes="container mb-4"
         title={"Why choose us"}
@@ -253,7 +253,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
       />
 
       <div
-        class="container flex flex-col sm:flex-row gap-4 items-center sm:gap-8"
+        class="container reveal fade-bottom flex flex-col sm:flex-row gap-4 items-center sm:gap-8"
       >
         <div
           class="w-[320px] sm:w-[38%] h-[320px] sm:h-[400px] sm:rounded-3xl rounded-2xl overflow-hidden flex-shrink-0 relative"
@@ -307,7 +307,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
 
     <!-- Testimonials -->
 
-    <section class="bg-purple-100 sm:py-24 py-12 px-6 sm:px-0">
+    <section class="reveal bg-purple-100 sm:py-24 py-12 px-6 sm:px-0">
       <div class="container mb-16 flex justify-between items-end">
         <AboutSection
           title="TESTIMONIES"
@@ -322,8 +322,8 @@ import NewsSection from "../components/sections/NewsSection.astro";
         </div>
       </div>
       <div class="container grid sm:grid-cols-2 gap-4 sm:gap-8">
-        <TestimonialCard />
-        <TestimonialCard />
+        <TestimonialCard classes="reveal fade-left" />
+        <TestimonialCard classes="reveal fade-right" />
       </div>
 
       <div class="mt-16 flex gap-2 justify-center">
