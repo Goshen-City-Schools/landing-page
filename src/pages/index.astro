@@ -118,13 +118,10 @@ import NewsSection from "../components/sections/NewsSection.astro";
           <h2 class="!mb-10">Welcome to Goshen Group of Schools</h2>
 
           <p class="text-gray-800">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
-            id! Architecto quaerat labore id provident, eveniet libero fuga
-            quidem ipsam incidunt nihil fugiat at. Enim fugiat a laborum culpa
-            hic esse delectus mollitia obcaecati ipsum. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Modi, ex. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Velit, voluptatem! Quod,
-            cupiditate.
+            Our vision at Goshen Group of Schools, is to build a solid academic
+            foundation for your children’s future and raise them up in the
+            nurture and admonition of God that they may turn out to be
+            well-rounded gentlemen and ladies in future.
           </p>
         </div>
 
@@ -135,11 +132,10 @@ import NewsSection from "../components/sections/NewsSection.astro";
         >
           <h2 class="text-white">Our Mission</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            pariatur optio possimus delectus! Repellendus voluptatibus magni,
-            laboriosam, autem dignissimos perferendis debitis provident deserunt
-            nemo maiores est asperiores voluptatum. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit.
+            Our mission is to inculcate in the child values of discipline,
+            integrity and hard work and build in him a strong and virile
+            character to enhance his potentials and position him for a gainful
+            future.
           </p>
         </div>
       </div>
@@ -154,11 +150,38 @@ import NewsSection from "../components/sections/NewsSection.astro";
         subtitle="Here's What make us Unique!"
       />
 
-      <div class="container sm:px-0 space-y-60">
-        <FlippableGridView />
-        <FlippableGridView isReverse="true/" />
-        <FlippableGridView />
-        <FlippableGridView isReverse="true/" />
+      <div class="container sm:px-0 space-y-6">
+        <FlippableGridView
+          title="Innovative Learning Technology"
+          imgSrc="https://res.cloudinary.com/dx9rpvjcw/image/upload/v1704672071/gallery/nlhji6z2asff6dithggc.jpg"
+          content={[
+            "In addidtion to traditional teaching methods, we also use technology to make learning more interesting and help students think better",
+            "We provide our children with adequate learning materials in spacious classrooms and the engagement of well trained and highly motivated teachers and teaching assistants, every child is encouraged to bring out his/her best.",
+          ]}
+        />
+        <FlippableGridView
+          isReverse="true/"
+          title="Diverse Extra-Curricullar Activities"
+          imgSrc="https://res.cloudinary.com/dx9rpvjcw/image/upload/v1704672071/gallery/agc5alfv8bfi9rg8syos.jpg"
+          content={[
+            "In addidtion to traditional teaching methods, we also use technology to make learning more interesting and help students think better",
+            "We provide our children with adequate learning materials in spacious classrooms and the engagement of well trained and highly motivated teachers and teaching assistants, every child is encouraged to bring out his/her best.",
+          ]}
+        />
+        <FlippableGridView
+          title="Blended Curriculum"
+          content={[
+            "At Goshen City Schools, our curriculum is a blend of the Nigerian National Basic Education curriculum and that of schools in the UK. We strongly believe that this unique blend will give your child the right foundation to face the future in the global village which the world has become in recent times. by pocessing these skills, they would be able to fit into any society where they find themselves in the future.",
+          ]}
+        />
+        <FlippableGridView
+          isReverse="true/"
+          title="State-of-the-art Facilities"
+          imgSrc="https://res.cloudinary.com/dx9rpvjcw/image/upload/v1704672072/gallery/rwrmjpgva96wdsvanvly.jpg"
+          content={[
+            "It is important to understand that science and technology cannot be over-emphasized, hence we have made sure that our science laboratories are well equipped. They include Chemistry, Physics, and Biology laboratories, while our facilities include Technology Workshop, Art Studio, Language room and all other essential amenity rooms.",
+          ]}
+        />
       </div>
     </section>
 
@@ -241,7 +264,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
             height={300}
             width={300}
             alt={"Goshen Founder"}
-            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
+            src="https://res.cloudinary.com/dx9rpvjcw/image/upload/v1704672071/gallery/ph9jx4mtoixehuvdt31t.jpg"
           />
         </div>
 
@@ -325,7 +348,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
 
 <style>
   .illustation-image__about {
-    background-image: url("https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703928891/banners/q8e1017bw0v3owa8gwh7.jpg");
+    background-image: url("https://res.cloudinary.com/dx9rpvjcw/image/upload/v1704672717/gallery/i7bakvtrj1pippjdubsp.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -338,7 +361,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
     background-image: url("https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703928891/banners/q8e1017bw0v3owa8gwh7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: bottom bottom;
     background-color: #090808bc;
     background-blend-mode: overlay;
     @apply h-full w-full left-0 top-0 -z-40;

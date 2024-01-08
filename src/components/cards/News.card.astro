@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import dayjs from "dayjs";
 import { AnimatePresence } from "framer-motion";
 
 interface Frontmatter {
@@ -41,7 +42,7 @@ export interface Props {
         </div>
 
         <div class="flex justify-between py-2 mb-2 opacity-95 font-bold text-gray-700">
-          <p class="text-sm">{post?.pubDate}</p>
+          <p class="text-sm">{dayjs(post?.pubDate)}</p>
           <p class="text-sm">{post?.readingTime}</p>
         </div>
         <div class="flex flex-col gap-2">

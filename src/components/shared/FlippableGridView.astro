@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
-const { isReverse, imgSrc, title } = Astro.props;
+import { lazy } from "react";
+const { isReverse, imgSrc, title, content } = Astro.props;
 ---
 
 <div
   id="flippableSection"
-  class={`w-full flex px-4 gap-4 cursor-pointer hover:shadow-md rounded-3xl  relative items-center sm:gap-8 ${
+  class={`w-full flex px-4 prose-h2:text-2xl gap-2 cursor-pointer rounded-3xl py-8 relative items-center sm:gap-4 ${
     isReverse ? "flex-row-reverse" : ""
   }`}
 >
@@ -19,21 +20,25 @@ const { isReverse, imgSrc, title } = Astro.props;
       alt={title ? title : "goshen"}
       height={300}
       width={300}
+      loading={"lazy"}
       class={"absolute top-0 w-full h-full object-cover"}
     />
   </div>
   <div
-    class="sm:prose-lg max-w-none prose absolute sm:relative bottom-0 bg-[#000000c2] sm:bg-white sm:bg-opacity-0 rounded-3xl p-8"
+    class="sm:prose-lg max-w-none prose prose-p:leading-8 absolute sm:relative bottom-0 bg-[#000000c2] sm:bg-white sm:bg-opacity-0 rounded-3xl p-8"
   >
     <h2 class="!mb-2 text-gray-100 sm:text-gray-900">
       {title ? title : "This section title"}
     </h2>
-    <p class="sm:line-clamp-6 line-clamp-3 text-gray-100 sm:text-gray-900">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ut neque
-      voluptas quidem obcaecati accusantium. Ipsum veritatis omnis nostrum
-      quaerat in ea dignissimos eligendi dolore, natus, voluptatibus atque ipsam
-      rerum sapiente quas sint! Voluptates fugit temporibus possimus asperiores
-      tenetur! Pariatur eos dolor voluptates ipsam autem!
-    </p>
+
+    {
+      content
+        ? content.map((c: string) => (
+            <p class="sm:line-clamp-6 line-clamp-3 text-gray-100 sm:text-gray-900">
+              {c}
+            </p>
+          ))
+        : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ut neque voluptas quidem obcaecati accusantium. Ipsum veritatis omnis nostrum quaerat in ea dignissimos eligendi dolore, natus, voluptatibus atque ipsam rerum sapiente quas sint! Voluptates fugit temporibus possimus asperiores tenetur! Pariatur eos dolor voluptates ipsam autem!"
+    }
   </div>
 </div>

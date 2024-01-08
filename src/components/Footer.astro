@@ -2,6 +2,7 @@
 import { SITE } from "../config";
 import { Icon } from "astro-icon/components";
 import Logo from "./shared/Logo.astro";
+import dayjs from "dayjs";
 ---
 
 <footer class="px-4 py-12 sm:py-16">
@@ -78,7 +79,8 @@ import Logo from "./shared/Logo.astro";
       </div>
     </div>
     <small class="text-center block">
-      Copyright &copy; 2024 . Goshen Group of Schools . All Rights Reserved
+      Copyright &copy; {dayjs().year()}. Goshen Group of Schools . All Rights
+      Reserved
     </small>
   </div>
 </footer>
