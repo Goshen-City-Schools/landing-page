@@ -5,7 +5,7 @@ import Layout from "../../layouts/Layout.astro";
 import { SITE } from "../../config";
 ---
 
-<!-- TODO: cREATE SUCCES PAGE ON FORM SUBMIT -->
+<!-- TODO: CREATE SUCCES PAGE ON FORM SUBMIT -->
 <Layout activeNav="contact-us">
   <main class="bg-black py-12 sm:py-24 px-8">
     <div class="container bg-white">
@@ -14,11 +14,7 @@ import { SITE } from "../../config";
           Get in touch with Us
         </h1>
         <!-- Contact form -->
-        <form
-          method="post"
-          action="/contact-us/success"
-          onsubmit="/contact-us/success"
-        >
+        <form onsubmit="handleSubmit()">
           <div class="flex flex-col sm:flex-row w-full gap-4">
             <!-- Firstname -->
             <div class="formControl">
@@ -52,6 +48,7 @@ import { SITE } from "../../config";
           <!-- Submit form -->
 
           <Button
+            onClick="handleSubmit()"
             type="submit"
             text="Send"
             color="blue"
@@ -140,3 +137,13 @@ import { SITE } from "../../config";
     @apply px-4 py-2 w-full rounded-xl border-gray-400;
   }
 </style>
+
+<script>
+  function handleSubmit(e: HTMLFormElement | null) {
+    e?.preventDefault();
+    alert("Submitted");
+  }
+
+  const form = document.querySelector("form");
+  handleSubmit(form);
+</script>

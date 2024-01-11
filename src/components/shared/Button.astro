@@ -1,10 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { iconName, text, color, classes, type } = Astro.props;
+const { iconName, text, color, classes, type, onClick } = Astro.props;
 ---
 
 <button
+  onclick={onClick}
   type={type}
   class={`flex gap-4 font-bold justify-center items-center ${
     color === "blue"
