@@ -6,9 +6,14 @@ form {
 }
 
 .formControl label {
-  @apply font-medium text-sm tracking-wide;
+  @apply font-bold text-sm tracking-wide text-purple-600;
 }
 
-.formControl input {
-  @apply px-4 py-2 w-full rounded-xl border-gray-400;
+.formControl input,
+.formControl select,
+.formControl textarea {
+  @apply px-4 py-2 w-full rounded-xl border-blue-400;
+}
+.formControl select {
+  @apply text-sm font-medium;
 }

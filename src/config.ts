@@ -15,7 +15,7 @@ export const SITE: Site = {
     link: "/",
     // TODO: Link address to map
   },
-  email: "goshencitychannels@gmail.com",
+  email: "goshencityschoolschannel@gmail.com",
 };
 
 export const LOCALE = {

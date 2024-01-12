@@ -123,6 +123,42 @@ const { activeNav } = Astro.props;
           } else {
             reveals[i].classList.remove("active");
           }
+
+          const counters = document.querySelectorAll(".counter");
+          // TODO: Let counter to update only when the section is in view, and only once
+          function counterUpdate() {
+            counters.forEach((counter) => {
+              counter.innerText = "0";
+              let counterStart;
+
+              const target = +counter.getAttribute("data-target");
+
+              if (counterStart >= target) return;
+
+              const updateCounter = () => {
+                const c = +counter.innerText;
+                counterStart = c;
+
+                const increment = target / 201;
+
+                if (c < target) {
+                  counter.innerText = `${Math.ceil(c + increment)}`;
+                  setTimeout(updateCounter, 1);
+                } else {
+                  return (
+                    (counter.innerText = Intl.NumberFormat(target.toString())),
+                    "en-US"
+                  );
+                }
+              };
+
+              updateCounter();
+            });
+          }
+
+          if (reveals[i].classList.contains("stat-div")) {
+            counterUpdate();
+          }
         }
       }
 

@@ -23,36 +23,57 @@ export default function ContactForm() {
         <div className="formControl">
           <label htmlFor="fName">First Name</label>
 
-          <input className="border" name="fName" type="text" />
+          <input className="border" id="fName" name="fName" type="text" />
         </div>
 
         {/* <!-- Last name --> */}
         <div className="formControl">
           <label htmlFor="lName">Last Name</label>
 
-          <input className="border" name="lName" type="text" />
+          <input className="border" id="lName" name="lName" type="text" />
         </div>
       </div>
 
       {/* <!-- Email --> */}
       <div className="formControl">
         <label htmlFor="email">Enter email</label>
-
-        <input className="border" name="email" type="email" />
+        <input className="border" id="email" name="email" type="email" />
       </div>
 
       {/* <!-- Phone Number --> */}
       <div className="formControl">
         <label htmlFor="phoneNumber">Phone number</label>
 
-        <input className="border" name="phoneNumber" type="tel" />
+        <input
+          className="border"
+          id="phoneNumber"
+          name="phoneNumber"
+          type="tel"
+        />
+      </div>
+
+      {/* <!-- Purpose --> */}
+      <div className="formControl">
+        <label htmlFor="phoneNumber">Purpose</label>
+
+        <select className="border" id="purposeCategory" name="purposeCategory">
+          <option value="">-- Select Purpose --</option>
+          <option value="">Admission Enquiry</option>
+        </select>
+      </div>
+
+      {/* <!-- Message --> */}
+      <div className="formControl">
+        <label htmlFor="phoneNumber">Message</label>
+
+        <textarea className="border" id="message" name="message" rows={6} />
       </div>
 
       {/* <!-- Submit form --> */}
 
       <button
         type="submit"
-        className={`flex gap-4 font-bold justify-center items-center ${"bg-blue-950 hover:border-blue-950 hover:bg-blue-50"} w-max rounded-[48px] transition duration-200 border-2 border-transparent px-6 py-3 text-white   hover:text-gray-700 `}
+        className={`flex mx-auto gap-4 font-bold justify-center items-center ${"bg-blue-950 hover:border-blue-950 hover:bg-blue-50"} w-max rounded-[48px] transition duration-200 border-2 border-transparent px-6 py-3 text-white   hover:text-gray-700 `}
       >
         Send
       </button>

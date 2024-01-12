@@ -24,11 +24,27 @@ import NewsSection from "../components/sections/NewsSection.astro";
         <div class="bgI sm:hidden absolute h-full"></div>
         <!-- Write-up -->
         <div
-          class="sm:col-span-4 sm:text-gray-700 grid sm:gap-8 sm:prose-lg prose items-start"
+          class="sm:col-span-4 relative sm:text-gray-700 grid sm:prose-lg prose items-center"
         >
-          <h1 class="sm:text-6xl !mb-2 sm:mb-auto text-white sm:text-gray-900">
+          <h1
+            class="relative sm:text-6xl !mb-2 sm:mb-auto text-white sm:text-gray-900"
+          >
             Empowering Every Child's Potential
+
+            <div class="absolute -bottom-20 right-4">
+              <img
+                src="/public/hero-touch-2.png"
+                height="48"
+                width="48"
+                alt=""
+                class="!border-none"
+              />
+            </div>
           </h1>
+
+          <div class="block w-[70%] -my-8 -mb-10">
+            <img src="/public/hero-touch-1.png" alt="" class="!border-none" />
+          </div>
 
           <p class="text-white sm:text-gray-900">
             Let your child become part of a supportive community where students,
@@ -36,7 +52,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
             that fosters both academic success and personal growth.
           </p>
           <!-- todo: add link to portal -->
-          <a href="https://goshen-portal.vercel.app/">
+          <a href="/contact-us" class="!no-underline">
             <Button
               text="Enrol Today"
               iconName="arrow-right"
