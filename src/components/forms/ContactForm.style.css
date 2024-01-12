@@ -1,0 +1,14 @@
+form {
+  @apply px-6 py-8 grid gap-8;
+}
+.formControl {
+  @apply flex w-full flex-col gap-2;
+}
+
+.formControl label {
+  @apply font-medium text-sm tracking-wide;
+}
+
+.formControl input {
+  @apply px-4 py-2 w-full rounded-xl border-gray-400;
+}

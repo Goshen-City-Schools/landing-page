@@ -15,21 +15,15 @@ const { activeNav } = Astro.props;
 <header class="border-b-2">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <!-- Top Header navigation -->
-  <div class="bg-purple-900 text-white sm:block hidden">
-    <div
-      class="container px-4 items-center py-4 grid grid-cols-3 justify-between"
-    >
+  <div class="text-gray-700 sm:block hidden">
+    <div class="container items-center py-4 grid grid-cols-3 justify-between">
       <a
         class="leading-tight flex gap-3 text-sm hover:!text-orange-400 transition"
         href={SITE.location.link}
         target="_blank"
         rel="noopener noreferrer"
         ><div class="text-[18px]">
-          <Icon
-            class={"text-orange-100"}
-            size={24}
-            name={"mdi:location-outline"}
-          />
+          <Icon size={24} name={"mdi:location-outline"} />
         </div>
         <p class="font-bold">{SITE.location.address}</p>
       </a>
@@ -37,7 +31,7 @@ const { activeNav } = Astro.props;
       <a
         href="tel:+2348036960509"
         class="flex gap-2 items-center justify-center w-full hover:!text-orange-400 transition"
-        ><Icon class={"text-orange-100"} size={20} name={"mdi:phone-outline"} />
+        ><Icon size={20} name={"mdi:phone-outline"} />
         <p class="font-bold tracking-widest">+234 803 696 0509</p>
       </a>
 
@@ -78,66 +72,70 @@ const { activeNav } = Astro.props;
   </div>
 
   <!-- Bottom Header Navigation -->
-  <div
-    class="container flex relative top-0 z-50 px-4 py-2 justify-between sm:items-center"
-  >
-    <button
-      class="hamburger-menu focus-outline"
-      aria-label="Open Menu"
-      aria-expanded="false"
-      aria-controls="menu-items"
+  <div class="bg-purple-900 text-gray-100">
+    <div
+      class="container flex relative top-0 z-50 px-4 py-2 justify-between sm:items-center"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="menu-icon"
+      <button
+        class="hamburger-menu focus-outline"
+        aria-label="Open Menu"
+        aria-expanded="false"
+        aria-controls="menu-items"
       >
-        <line x1="7" y1="12" x2="21" y2="12" class="line"></line>
-        <line x1="3" y1="6" x2="21" y2="6" class="line"></line>
-        <line x1="12" y1="18" x2="21" y2="18" class="line"></line>
-        <line x1="18" y1="6" x2="6" y2="18" class="close"></line>
-        <line x1="6" y1="6" x2="18" y2="18" class="close"></line>
-      </svg>
-    </button>
-    <Logo />
-    <nav class="flex sm:justify-end justify-center items-end gap-4">
-      <!-- Hamburger -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="menu-icon"
+        >
+          <line x1="7" y1="12" x2="21" y2="12" class="line"></line>
+          <line x1="3" y1="6" x2="21" y2="6" class="line"></line>
+          <line x1="12" y1="18" x2="21" y2="18" class="line"></line>
+          <line x1="18" y1="6" x2="6" y2="18" class="close"></line>
+          <line x1="6" y1="6" x2="18" y2="18" class="close"></line>
+        </svg>
+      </button>
+      <Logo />
+      <nav class="flex sm:justify-end justify-center items-end gap-4">
+        <!-- Hamburger -->
 
-      <!-- Navigation Menu -->
-      <ul id="menu-items" class="display-none sm:flex">
-        <li>
-          <a href="/" class={activeNav === "/" ? "active" : ""}> Home</a>
-        </li>
-        <li>
-          <a href="/about" class={activeNav === "about" ? "active" : ""}>
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="/gallery" class={activeNav === "gallery" ? "active" : ""}>
-            Gallery
-          </a>
-        </li>
-        <li>
-          <a href="/news" class={activeNav === "news" ? "active" : ""}> News</a>
-        </li>
-        <li>
-          <a
-            href="/contact-us"
-            class={activeNav === "contact-us" ? "active" : ""}
-          >
-            Contact Us
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <!-- Navigation Menu -->
+        <ul id="menu-items" class="display-none sm:flex">
+          <li>
+            <a href="/" class={activeNav === "/" ? "active" : ""}> Home</a>
+          </li>
+          <li>
+            <a href="/about" class={activeNav === "about" ? "active" : ""}>
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="/gallery" class={activeNav === "gallery" ? "active" : ""}>
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="/news" class={activeNav === "news" ? "active" : ""}>
+              News</a
+            >
+          </li>
+          <li>
+            <a
+              href="/contact-us"
+              class={activeNav === "contact-us" ? "active" : ""}
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -163,11 +161,11 @@ const { activeNav } = Astro.props;
     @apply col-span-2 flex items-center justify-center;
   }
   nav ul li a {
-    @apply w-full px-4 py-3 text-center font-bold hover:text-purple-950 sm:my-0 sm:px-2 sm:py-1;
+    @apply w-full px-4 py-3 text-center font-bold hover:text-gray-400 sm:my-0 sm:px-2 sm:py-1;
   }
 
   nav a.active {
-    @apply underline text-purple-900 decoration-2 underline-offset-8;
+    @apply underline text-gray-300 decoration-2 underline-offset-8;
   }
   nav a.active svg {
     @apply fill-skin-accent;

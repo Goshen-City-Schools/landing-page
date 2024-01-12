@@ -3,9 +3,10 @@ import { Icon } from "astro-icon/components";
 import Button from "../../components/shared/Button.astro";
 import Layout from "../../layouts/Layout.astro";
 import { SITE } from "../../config";
+import ContactForm from "../../components/forms/ContactForm";
 ---
 
-<!-- TODO: CREATE SUCCES PAGE ON FORM SUBMIT -->
+<!-- TODO: CREATE SUCCESS PAGE ON FORM SUBMIT -->
 <Layout activeNav="contact-us">
   <main class="bg-black py-12 sm:py-24 px-8">
     <div class="container bg-white">
@@ -14,48 +15,8 @@ import { SITE } from "../../config";
           Get in touch with Us
         </h1>
         <!-- Contact form -->
-        <form onsubmit="handleSubmit()">
-          <div class="flex flex-col sm:flex-row w-full gap-4">
-            <!-- Firstname -->
-            <div class="formControl">
-              <label for="fName">First Name</label>
 
-              <input class="border" name="fName" type="text" />
-            </div>
-
-            <!-- Last name -->
-            <div class="formControl">
-              <label for="lName">Last Name</label>
-
-              <input class="border" name="lName" type="text" />
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div class="formControl">
-            <label for="email">Enter email</label>
-
-            <input class="border" name="email" type="email" />
-          </div>
-
-          <!-- Phone Number -->
-          <div class="formControl">
-            <label for="phoneNumber">Phone number</label>
-
-            <input class="border" name="phoneNumber" type="tel" />
-          </div>
-
-          <!-- Submit form -->
-
-          <Button
-            onClick="handleSubmit()"
-            type="submit"
-            text="Send"
-            color="blue"
-            iconName="send"
-            classes="mx-auto mt-6"
-          />
-        </form>
+        <ContactForm client:load />
 
         <!--  -->
         <div
@@ -120,30 +81,3 @@ import { SITE } from "../../config";
     </div>
   </main>
 </Layout>
-
-<style>
-  form {
-    @apply px-6 py-8 grid gap-8;
-  }
-  .formControl {
-    @apply flex w-full flex-col gap-2;
-  }
-
-  .formControl label {
-    @apply font-medium text-sm tracking-wide;
-  }
-
-  .formControl input {
-    @apply px-4 py-2 w-full rounded-xl border-gray-400;
-  }
-</style>
-
-<script>
-  function handleSubmit(e: HTMLFormElement | null) {
-    e?.preventDefault();
-    alert("Submitted");
-  }
-
-  const form = document.querySelector("form");
-  handleSubmit(form);
-</script>

@@ -17,27 +17,32 @@ import NewsSection from "../components/sections/NewsSection.astro";
   <main class="">
     <!-- Hero  -->
 
-    <section class="hero relative grid w-full h-[70vh] sm:py-4">
+    <section class="hero relative grid w-full h-[70vh]">
       <div
         class="container gap-8 px-8 sm:px-4 items-center grid sm:grid-cols-7 h-full overflow-hidden"
       >
-        <div class="bgI sm:hidden absolute"></div>
+        <div class="bgI sm:hidden absolute h-full"></div>
         <!-- Write-up -->
         <div
-          class="sm:col-span-4 sm:text-gray-700 grid sm:gap-8 prose-lg sm:prose items-start"
+          class="sm:col-span-4 sm:text-gray-700 grid sm:gap-8 sm:prose-lg prose items-start"
         >
           <h1 class="sm:text-6xl !mb-2 sm:mb-auto text-white sm:text-gray-900">
             Empowering Every Child's Potential
           </h1>
 
           <p class="text-white sm:text-gray-900">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-            nihil velit pusamus suscipit distinctio, consectetur illum
-            similique.
+            Let your child become part of a supportive community where students,
+            teachers, and parents collaborate to create a nurturing environment
+            that fosters both academic success and personal growth.
           </p>
           <!-- todo: add link to portal -->
-          <a href="http://g"></a>
-          <Button text="Enroll Today" iconName="arrow-right" color="blue" />
+          <a href="https://goshen-portal.vercel.app/">
+            <Button
+              text="Enrol Today"
+              iconName="arrow-right"
+              color="purple"
+            /></a
+          >
         </div>
 
         <!-- Illustration -->
@@ -47,9 +52,9 @@ import NewsSection from "../components/sections/NewsSection.astro";
           <Image
             height={600}
             width={600}
-            class={"absolute top-0 h-full w-full object-cover"}
-            src={"https://res.cloudinary.com/dx9rpvjcw/image/upload/v1703929914/banners/ucqolrijlkrtybbizbkn.jpg"}
-            alt={"Goshen City and Starts Group of Schools"}
+            class={"absolute top-0 h-full w-full object-contain"}
+            src={"/hero-img.png"}
+            alt={"Goshen City and Stars Group of Schools"}
           />
         </div>
       </div>
@@ -66,10 +71,7 @@ import NewsSection from "../components/sections/NewsSection.astro";
             class="flex flex-col px-2 sm:px-3 prose w-full reveal fade-bottom justify-center items-center text-center gap-2"
           >
             <h3 class="not-italic text-white text-2xl">Creche</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, itaque maiores veritatis hic perferendis vel.
-            </p>
+            <p>Foundational care and development for infants and toddlers.</p>
           </div>
 
           <div
@@ -77,8 +79,8 @@ import NewsSection from "../components/sections/NewsSection.astro";
           >
             <h3 class="not-italic text-white text-2xl">Nursery</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, itaque maiores veritatis hic perferendis vel.
+              Early literacy and numeracy skills, creative expression through
+              art and play, and basic social skills.
             </p>
           </div>
 
@@ -87,8 +89,8 @@ import NewsSection from "../components/sections/NewsSection.astro";
           >
             <h3 class="not-italic text-white text-2xl">Basic</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, itaque maiores veritatis hic perferendis vel.
+              Students develop foundational academic skills, critical thinking,
+              and problem-solving abilities.
             </p>
           </div>
           <div
@@ -96,8 +98,8 @@ import NewsSection from "../components/sections/NewsSection.astro";
           >
             <h3 class="not-italic text-white text-2xl">Secondary</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, itaque maiores veritatis hic perferendis vel.
+              The curriculum is more specialized and we prepare students for
+              higher education & Career paths.
             </p>
           </div>
         </div>
@@ -113,15 +115,16 @@ import NewsSection from "../components/sections/NewsSection.astro";
 
       <div class="container flex flex-col gap-2 px-6 sm:px-0">
         <div
-          class="prose max-w-6xl prose-headings:mb-3 mb-12 text-gray-800 w-full reveal fade-bottom"
+          class="prose max-w-6xl prose-headings:mb-3 sm:prose-lg mb-12 text-gray-800 w-full reveal fade-bottom"
         >
           <h2 class="!mb-10">Welcome to Goshen Group of Schools</h2>
 
           <p class="text-gray-800">
-            Our vision at Goshen Group of Schools, is to build a solid academic
-            foundation for your children’s future and raise them up in the
-            nurture and admonition of God that they may turn out to be
-            well-rounded gentlemen and ladies in future.
+            In our School, each day is a new opportunity for discovery,
+            learning, and growth. At our school, we foster a vibrant community
+            dedicated to nurturing young minds, cultivating a love for
+            knowledge, and preparing students for a future of limitless
+            possibilities. Students at our schools will experience significant
           </p>
         </div>
 
@@ -134,10 +137,10 @@ import NewsSection from "../components/sections/NewsSection.astro";
         >
           <h2 class="text-white">Our Mission</h2>
           <p>
-            Our mission is to inculcate in the child values of discipline,
-            integrity and hard work and build in him a strong and virile
-            character to enhance his potentials and position him for a gainful
-            future.
+            Fostering a culture of character, learning, and career readiness. We
+            strive to provide an enriching educational experience that not only
+            equips students with the knowledge for future careers but also
+            instills the values and skills necessary for lifelong success.
           </p>
         </div>
       </div>
@@ -154,16 +157,15 @@ import NewsSection from "../components/sections/NewsSection.astro";
 
       <div class="container sm:px-0 space-y-6">
         <FlippableGridView
-          title="Innovative Learning Technology"
+          title="We focus on Character Development"
           imgSrc="https://res.cloudinary.com/dx9rpvjcw/image/upload/v1704672071/gallery/nlhji6z2asff6dithggc.jpg"
           content={[
-            "In addidtion to traditional teaching methods, we also use technology to make learning more interesting and help students think better",
-            "We provide our children with adequate learning materials in spacious classrooms and the engagement of well trained and highly motivated teachers and teaching assistants, every child is encouraged to bring out his/her best.",
+            "We place a strong emphasis on character education, instilling values like respect, responsibility, and integrity to help shape your child into a compassionate and principled individual.",
           ]}
         />
         <FlippableGridView
           isReverse="true/"
-          title="Diverse Extra-Curricullar Activities"
+          title="Innovative Technology Integration"
           imgSrc="https://res.cloudinary.com/dx9rpvjcw/image/upload/v1704672071/gallery/agc5alfv8bfi9rg8syos.jpg"
           content={[
             "In addidtion to traditional teaching methods, we also use technology to make learning more interesting and help students think better",
@@ -283,18 +285,19 @@ import NewsSection from "../components/sections/NewsSection.astro";
           <p
             class="text-gray-700 sm:line-clamp-7 line-clamp-5 prose !mb-0 max-w-none"
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-            voluptates tempore fugiat autem quisquam tenetur explicabo
-            laudantium expedita eaque quasi modi ratione, earum sunt! Tempore
-            aspernatur eum, reprehenderit molestias distinctio alias maiores
-            enim labore obcaecati. Amet quaerat excepturi, illo iure esse
-            perferendis earum nam porro architecto cupiditate voluptates
-            consectetur sapiente? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Distinctio fugiat quam similique.
+            As a household word that is strategically balanced within our
+            Nation’s educational system, Goshen City and Goshen Stars Global
+            College is a brand name that has sprung to limelight within a couple
+            of years ago, and indeed a dream come through. As a brand name that
+            implies to sparkle, shine, glitter, or appear bright, the idea of
+            naming the academy “Goshen City and Stars” by the founder of the
+            academy was not accidental.The initiative to set up this Academy was
+            I believe, as a result of the explosive rapid changes within the
+            social structures of the society in which we live.
           </p>
 
           <a
-            href="/about"
+            href="/about#director-speech"
             class="font-bold mb-4 mt-2 text-lg flex text-purple-500 underline-offset-4 underline py-0"
             >Read More
           </a>
