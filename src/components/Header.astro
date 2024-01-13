@@ -6,7 +6,7 @@ import { Icon } from "astro-icon/components";
 import Logo from "./shared/Logo.astro";
 
 export interface Props {
-  activeNav?: "/" | "about" | "news" | "gallery" | "contact-us";
+  activeNav?: "/" | "about" | "news" | "gallery" | "portal" | "contact-us";
 }
 
 const { activeNav } = Astro.props;
@@ -124,6 +124,17 @@ const { activeNav } = Astro.props;
             <a href="/news" class={activeNav === "news" ? "active" : ""}>
               News</a
             >
+          </li>
+
+          <li>
+            <a
+              href="https://goshen-portal.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class={activeNav === "portal" ? "active" : ""}
+            >
+              Portal
+            </a>
           </li>
           <li>
             <a
