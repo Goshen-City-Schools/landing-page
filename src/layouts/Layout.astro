@@ -128,27 +128,21 @@ const { activeNav } = Astro.props;
           // TODO: Let counter to update only when the section is in view, and only once
           function counterUpdate() {
             counters.forEach((counter) => {
-              counter.innerText = "0";
-              let counterStart;
+              counter.innerHTML = "0";
 
-              const target = +counter.getAttribute("data-target");
+              const target = Number(counter?.getAttribute("data-target"));
 
-              if (counterStart >= target) return;
+              if (!target) return;
 
               const updateCounter = () => {
-                const c = +counter.innerText;
-                counterStart = c;
-
+                const c = +counter.innerHTML;
                 const increment = target / 201;
 
                 if (c < target) {
-                  counter.innerText = `${Math.ceil(c + increment)}`;
+                  counter.innerHTML = `${Math.ceil(c + increment)}`;
                   setTimeout(updateCounter, 1);
                 } else {
-                  return (
-                    (counter.innerText = Intl.NumberFormat(target.toString())),
-                    "en-US"
-                  );
+                  return (counter.innerHTML = target.toString()), "en-US";
                 }
               };
 
