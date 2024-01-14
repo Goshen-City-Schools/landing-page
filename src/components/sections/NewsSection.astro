@@ -15,6 +15,8 @@ export interface Frontmatter {
   url: string;
 }
 const posts = await Astro.glob<Frontmatter>("../../pages/news/*.mdx");
+
+const { size } = Astro.props;
 ---
 
 <section class="mb-24 px-6 py-8 sm:py-24 sm:px-0">
@@ -33,9 +35,12 @@ const posts = await Astro.glob<Frontmatter>("../../pages/news/*.mdx");
 
   <div class="container grid sm:grid-cols-3 sm:gap-x-8 gap-y-10">
     {
-      posts?.map(
-        (post) => post && <NewsCard url={post?.url} post={post?.frontmatter} />
-      )
+      posts
+        ?.slice(0, size)
+        .map(
+          (post) =>
+            post && <NewsCard url={post?.url} post={post?.frontmatter} />
+        )
     }
   </div>
 </section>
