@@ -5,8 +5,8 @@ const { isReverse, imgSrc, title, content } = Astro.props;
 
 <div
   id="flippableSection"
-  class={`w-full flex px-4 prose-h2:text-2xl flex-col sm:flex-row gap-2 cursor-pointer rounded-3xl py-8 relative items-center sm:gap-4 ${
-    isReverse ? "flex-row-reverse" : ""
+  class={`w-full flex px-4 prose-h2:text-2xl  gap-2 cursor-pointer rounded-3xl py-8 relative items-center sm:gap-4 ${
+    isReverse ? "flex-row-reverse" : "flex-col sm:flex-row"
   }`}
 >
   <div
@@ -26,10 +26,9 @@ const { isReverse, imgSrc, title, content } = Astro.props;
     />
   </div>
   <div
-    class=`sm:prose-lg reveal ${
+    class=`sm:prose-lg reveal sm:px-8 ${
       isReverse ? "fade-left" : "fade-right"
     } max-w-none prose prose-p:leading-8 absolute sm:relative bottom-0  sm:bg-white sm:bg-opacity-0 rounded-3xl py-8`
-    sm:px-8
   >
     <h2 class="!mb-2 text-gray-900">
       {title ? title : "This section title"}
