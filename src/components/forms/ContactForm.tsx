@@ -66,7 +66,13 @@ export default function ContactForm() {
       <div className="formControl">
         <label htmlFor="phoneNumber">Message</label>
 
-        <textarea className="border" id="message" name="message" rows={6} />
+        <textarea
+          className="border"
+          placeholder="Optional..."
+          id="message"
+          name="message"
+          rows={6}
+        />
       </div>
 
       {/* <!-- Submit form --> */}

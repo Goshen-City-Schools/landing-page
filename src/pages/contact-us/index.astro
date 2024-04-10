@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import Button from "../../components/shared/Button.astro";
 import Layout from "../../layouts/Layout.astro";
 import { SITE } from "../../config";
 import ContactForm from "../../components/forms/ContactForm";
@@ -34,25 +33,25 @@ import ContactForm from "../../components/forms/ContactForm";
             </h1>
 
             <div
-              class="mb-6 text-gray-700 flex flex-col gap-4 md:gap-6 text-sm"
+              class="mb-6 text-gray-700 flex flex-col gap-4 md:gap-6 text-sm sm:text-lg"
             >
               <!-- School Location -->
               <a href={SITE.location.link} class="flex gap-3">
-                <Icon size={20} name={"mdi:location"} />
+                <Icon size={24} name={"mdi:location"} />
 
                 <p>{SITE.location.address}</p>
               </a>
 
               <!-- School Phone Number -->
               <a href=`mailto:${SITE.email}` class="flex gap-3">
-                <Icon size={20} name={"mdi:phone-outline"} />
+                <Icon size={24} name={"mdi:phone-outline"} />
 
                 <p>08036960509</p>
               </a>
 
               <!-- School Email -->
               <a href=`mailto:${SITE.email}` class="flex gap-3">
-                <Icon size={20} name={"mdi:envelope-outline"} />
+                <Icon size={24} name={"mdi:envelope-outline"} />
 
                 <p>{SITE.email}</p>
               </a>
